@@ -43,4 +43,47 @@ class FFormEvent(mainframe.menu_utama.FForm):
 		print (self.m_textCtrl6.GetValue())
 		print ("okay")
 		event.Skip()
+
+class FPenjualanEvent(mainframe.menu_utama.FPenjualan\
+,mainframe.menu_utama.FUtama):
+
+
+	def __init__(self, *args, **kwds):
+		super(FPenjualanEvent, self).__init__(*args, **kwds)
+		self.Maximize(True)
+		return None
+	
+	def FPenjualanOnClose(self,event):
+		return None
+		#self.FUtama.Show()
+
+class FUtamaEvent(mainframe.menu_utama.FUtama):
+	"""
+	"""
+	def __init__(self, *args, **kwds):
+		super(FUtamaEvent, self).__init__(*args, **kwds)
+	
+	def m_button1OnButtonClick(self,event):
+		l = FPenjualanEvent(self)
+		l.Show()
+		#self.Hide()
+		event.Skip()
+		return None
+
+	def m_button2OnButtonClick(self,event):
+		event.Skip()
+		return None
+	
+	def m_button3OnButtonClick(self,event):
+		event.Skip()
+		return None
+	
+	def m_button4OnButtonClick(self,event):
+		event.Skip()
+		return None
+	
+	def m_button5OnButtonClick(self,event):
+		event.Skip()
+		return None
+
 	

@@ -8,9 +8,9 @@ class lokasigambar(wx.StaticBitmap,wx.Bitmap):
         super(lokasigambar,self).__init__(*args,**kwds)        
         self.Bitmap=wx.Bitmap(u"/home/pmc/mygit/LearningPy/GUIExamps/MyGUI/mainframe/icons/store.png",wx.BITMAP_TYPE_ANY)
         """disini sudah bisa """
-    
+        return None
     
     def __repr__(self):
-        return print ("this is my functions")
+        return "this is my functions"
 
 
