@@ -1,4 +1,5 @@
 import wx
+import mainframe.rangka
 import mainframe.menu_utama
 
 

@@ -8,6 +8,7 @@
 ###########################################################################
 
 from mainframe.icons.koleksigambar import lokasigambar
+from mainframe.rangka import rangka
 import wx
 import wx.xrc
 
@@ -274,10 +275,10 @@ class FForm ( wx.Frame ):
 ## Class FPenjualan
 ###########################################################################
 
-class FPenjualan ( wx.Frame ):
+class FPenjualan ( rangka ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 600,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		rangka.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 600,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.Size( -1,-1 ), wx.Size( -1,-1 ) )
 		
@@ -292,6 +293,12 @@ class FPenjualan ( wx.Frame ):
 		
 		self.SetSizer( bSizer10 )
 		self.Layout()
+		self.MenuPenjualan = wx.MenuBar( 0 )
+		self.m_menu2 = wx.Menu()
+		self.MenuPenjualan.Append( self.m_menu2, u"Berkas" ) 
+		
+		self.SetMenuBar( self.MenuPenjualan )
+		
 	
 	def __del__( self ):
 		pass
