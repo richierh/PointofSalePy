@@ -1,7 +1,8 @@
 #! /usr/bin/python
 import wx
-from mainframe.fungsievent import *
-print ("hhh")
+import os
+
+from frame.event import *
 
 class MyApp(wx.App):
     def OnInit(self):
@@ -9,8 +10,9 @@ class MyApp(wx.App):
         self.SetTopWindow(self.frame)
         self.frame.Show()
         return True
-
+import os
 
 if __name__ == "__main__":
+    
     app = MyApp(0)
     app.MainLoop()

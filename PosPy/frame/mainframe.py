@@ -7,8 +7,8 @@
 ## PLEASE DO "NOT" EDIT THIS FILE!
 ###########################################################################
 
-from mainframe.icons.koleksigambar import lokasigambar
-from mainframe.rangka import rangka
+from frame.custom import CStaticBitmap
+from frame.custom import CToolbar
 import wx
 import wx.xrc
 
@@ -76,7 +76,7 @@ class FUtama ( wx.Frame ):
 		
 		bSizer2.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
-		self.m_bitmap2 = lokasigambar( self.m_panel2, wx.ID_ANY, wx.NullBitmap, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_bitmap2 = CStaticBitmap( self.m_panel2, wx.ID_ANY, wx.NullBitmap, wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer2.Add( self.m_bitmap2, 3, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.EXPAND, 5 )
 		
 		
@@ -275,10 +275,10 @@ class FForm ( wx.Frame ):
 ## Class FPenjualan
 ###########################################################################
 
-class FPenjualan ( rangka ):
+class FPenjualan ( CToolbar ):
 	
 	def __init__( self, parent ):
-		rangka.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 600,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		CToolbar.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 600,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.Size( -1,-1 ), wx.Size( -1,-1 ) )
 		
@@ -343,6 +343,24 @@ class MyPanel1 ( wx.Panel ):
 		
 		self.SetSizer( bSizer8 )
 		self.Layout()
+	
+	def __del__( self ):
+		pass
+	
+
+###########################################################################
+## Class MyFrame4
+###########################################################################
+
+class MyFrame4 ( wx.Frame ):
+	
+	def __init__( self, parent ):
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		
+		
+		self.Centre( wx.BOTH )
 	
 	def __del__( self ):
 		pass
