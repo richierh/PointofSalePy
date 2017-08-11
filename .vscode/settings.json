@@ -2,7 +2,7 @@
 {
     "python.pythonPath": "/home/richie/.virtualenvs/ormpony/bin/python",
     "python.autoComplete.extraPaths": [
-        "/home/richie/mygit/PointofSalePy/PosPy/mainframe",
-        "/home/richie/mygit/PointofSalePy/PosPy"
+        "$HOME/mygit/PointofSalePy/PosPy/mainframe",
+        "$HOME/mygit/PointofSalePy/PosPy"
     ],"
 }
