@@ -278,7 +278,7 @@ class FForm ( wx.Frame ):
 class FPenjualan ( CToolbar ):
 	
 	def __init__( self, parent ):
-		CToolbar.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 600,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		CToolbar.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 1000,600 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.Size( -1,-1 ), wx.Size( -1,-1 ) )
 		
@@ -288,6 +288,63 @@ class FPenjualan ( CToolbar ):
 		self.m_panel4.SetForegroundColour( wx.Colour( 255, 255, 255 ) )
 		self.m_panel4.SetBackgroundColour( wx.Colour( 0, 0, 0 ) )
 		
+		gSizer2 = wx.GridSizer( 2, 2, 0, 0 )
+		
+		fgSizer4 = wx.FlexGridSizer( 2, 6, 0, 0 )
+		fgSizer4.AddGrowableCol( 0 )
+		fgSizer4.AddGrowableRow( 0 )
+		fgSizer4.SetFlexibleDirection( wx.BOTH )
+		fgSizer4.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+		
+		self.m_staticText10 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText10.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText10, 0, wx.ALL, 5 )
+		
+		self.m_staticText11 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText11.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText11, 0, wx.ALL, 5 )
+		
+		self.m_staticText12 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText12.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText12, 0, wx.ALL, 5 )
+		
+		self.m_staticText13 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText13.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText13, 0, wx.ALL, 5 )
+		
+		self.m_staticText14 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText14.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText14, 0, wx.ALL, 5 )
+		
+		self.m_staticText15 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText15.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText15, 0, wx.ALL, 5 )
+		
+		self.m_textCtrl9 = wx.TextCtrl( self.m_panel4, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_textCtrl9, 0, wx.ALL, 5 )
+		
+		self.m_textCtrl10 = wx.TextCtrl( self.m_panel4, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_textCtrl10, 0, wx.ALL, 5 )
+		
+		self.m_textCtrl11 = wx.TextCtrl( self.m_panel4, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_textCtrl11, 0, wx.ALL, 5 )
+		
+		self.m_textCtrl12 = wx.TextCtrl( self.m_panel4, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_textCtrl12, 0, wx.ALL, 5 )
+		
+		self.m_textCtrl7 = wx.TextCtrl( self.m_panel4, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_textCtrl7, 0, wx.ALL, 5 )
+		
+		self.m_textCtrl8 = wx.TextCtrl( self.m_panel4, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_textCtrl8, 0, wx.ALL, 5 )
+		
+		
+		gSizer2.Add( fgSizer4, 1, wx.EXPAND, 5 )
+		
+		
+		self.m_panel4.SetSizer( gSizer2 )
+		self.m_panel4.Layout()
+		gSizer2.Fit( self.m_panel4 )
 		bSizer10.Add( self.m_panel4, 1, wx.EXPAND |wx.ALL, 5 )
 		
 		
