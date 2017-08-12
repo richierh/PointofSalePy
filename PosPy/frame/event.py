@@ -1,9 +1,9 @@
 import wx
-import mainframe.rangka
-import mainframe.menu_utama
+import frame.custom
+import frame.mainframe
 
 
-class FFormEvent(mainframe.menu_utama.FForm):
+class FFormEvent(frame.mainframe.FForm):
 	"""
 	"""
 
@@ -45,8 +45,8 @@ class FFormEvent(mainframe.menu_utama.FForm):
 		print ("okay")
 		event.Skip()
 
-class FPenjualanEvent(mainframe.menu_utama.FPenjualan\
-,mainframe.menu_utama.FUtama):
+class FPenjualanEvent(frame.mainframe.FPenjualan\
+,frame.mainframe.FUtama):
 
 
 	def __init__(self, *args, **kwds):
@@ -58,7 +58,7 @@ class FPenjualanEvent(mainframe.menu_utama.FPenjualan\
 		return None
 		#self.FUtama.Show()
 
-class FUtamaEvent(mainframe.menu_utama.FUtama):
+class FUtamaEvent(frame.mainframe.FUtama):
 	"""
 	"""
 	def __init__(self, *args, **kwds):

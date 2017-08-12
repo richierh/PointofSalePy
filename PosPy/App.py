@@ -1,4 +1,4 @@
-from mainframe.main import MyApp
+from frame.main import MyApp
 
 # Kode ini adalah program utama untuk menjalankan aplikasi
 
