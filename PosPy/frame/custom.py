@@ -2,7 +2,8 @@
 
 import wx
 import os
-
+#from mainframe import FPenjualan
+#import mainframe
 
 class CToolbar(wx.Frame):
 
@@ -28,6 +29,25 @@ class CToolbar(wx.Frame):
 
 
         self.m_toolBar2.Realize() 
+
+
+class CDataViewListCtrl( wx.Panel ):
+	
+	def __init__( self, *args,**kwds):
+		super (CDataViewListCtrl,self).__init__()
+		
+		bSizer13 = wx.BoxSizer( wx.VERTICAL )
+		
+	#	self.m_dataViewListCtrl1 = wx.dataview.DataViewListCtrl( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+	#	bSizer13.Add( self.m_dataViewListCtrl1, 0, wx.ALL, 5 )
+		
+		
+	#	self.SetSizer( bSizer13 )
+		self.Layout()
+	
+	#def __del__( self ):
+	#	pass
+	
 
 class CStaticBitmap(wx.StaticBitmap,wx.Bitmap):
     """
