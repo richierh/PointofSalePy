@@ -12,7 +12,6 @@ from frame.custom import CDataViewListCtrl
 from frame.custom import CToolbar
 import wx
 import wx.xrc
-import wx.dataview
 
 ###########################################################################
 ## Class FUtama
@@ -299,27 +298,27 @@ class FPenjualan ( CToolbar ):
 		fgSizer4.SetFlexibleDirection( wx.BOTH )
 		fgSizer4.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 		
-		self.m_staticText16 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText16 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"No", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText16.Wrap( -1 )
 		fgSizer4.Add( self.m_staticText16, 0, wx.ALL, 5 )
 		
-		self.m_staticText17 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText17 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"A", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText17.Wrap( -1 )
 		fgSizer4.Add( self.m_staticText17, 0, wx.ALL, 5 )
 		
-		self.m_staticText18 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText18 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"B", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText18.Wrap( -1 )
 		fgSizer4.Add( self.m_staticText18, 0, wx.ALL, 5 )
 		
-		self.m_staticText19 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText19 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"C", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText19.Wrap( -1 )
 		fgSizer4.Add( self.m_staticText19, 0, wx.ALL, 5 )
 		
-		self.m_staticText20 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText20 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"D", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText20.Wrap( -1 )
 		fgSizer4.Add( self.m_staticText20, 0, wx.ALL, 5 )
 		
-		self.m_staticText21 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText21 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"E", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText21.Wrap( -1 )
 		fgSizer4.Add( self.m_staticText21, 0, wx.ALL, 5 )
 		
@@ -344,8 +343,8 @@ class FPenjualan ( CToolbar ):
 		
 		bSizer12.Add( fgSizer4, 1, wx.EXPAND, 5 )
 		
-		self.m_panel9 = CDataViewListCtrl( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-		bSizer12.Add( self.m_panel9, 1, wx.EXPAND |wx.ALL, 5 )
+		self.m_panel91 = CDataViewListCtrl( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer12.Add( self.m_panel91, 5, wx.ALL|wx.EXPAND, 5 )
 		
 		
 		self.m_panel9.SetSizer( bSizer12 )
@@ -433,28 +432,6 @@ class MyFrame4 ( wx.Frame ):
 		
 		
 		self.Centre( wx.BOTH )
-	
-	def __del__( self ):
-		pass
-	
-
-###########################################################################
-## Class MyPanel2
-###########################################################################
-
-class MyPanel2 ( wx.Panel ):
-	
-	def __init__( self, parent ):
-		wx.Panel.__init__ ( self, parent, id = wx.ID_ANY, pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.TAB_TRAVERSAL )
-		
-		bSizer13 = wx.BoxSizer( wx.VERTICAL )
-		
-		self.m_dataViewListCtrl1 = wx.dataview.DataViewListCtrl( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer13.Add( self.m_dataViewListCtrl1, 0, wx.ALL, 5 )
-		
-		
-		self.SetSizer( bSizer13 )
-		self.Layout()
 	
 	def __del__( self ):
 		pass
