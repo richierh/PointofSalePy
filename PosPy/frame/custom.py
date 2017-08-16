@@ -3,7 +3,7 @@
 import os
 #$import wx.dataview
 import wx
-
+#print (mpath)
 class CToolbar(wx.Frame):
 
     def __init__(self,*args,**kwds):
@@ -13,30 +13,33 @@ class CToolbar(wx.Frame):
     def __settoolbar__(self):
         """
         """
+        #import frame.icons.getdir
+
+
         self.m_toolBar2=self.CreateToolBar(style=wx.TB_DEFAULT_STYLE,id=wx.ID_ANY)
         self.m_toolBar2.SetToolBitmapSize((50, 50))
         self.m_tool6 = self.m_toolBar2.AddTool(wx.ID_ANY, u"tool", \
-        wx.Bitmap(os.path.realpath("PosPy/frame/icons/toolbars/software.png"), \
+        wx.Bitmap(os.path.realpath("frame/icons/toolbars/software.png"), \
         wx.BITMAP_TYPE_ANY), \
         wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None)
         self.m_tool7 = self.m_toolBar2.AddTool(wx.ID_ANY, u"tool", \
-        wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), \
+        wx.Bitmap( os.path.realpath("frame/icons/toolbars/software.png"), \
         wx.BITMAP_TYPE_ANY), \
         wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None)
         self.m_tool8 = self.m_toolBar2.AddTool(wx.ID_ANY, u"tool", \
-        wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), \
+        wx.Bitmap( os.path.realpath("frame/icons/toolbars/software.png"), \
         wx.BITMAP_TYPE_ANY), \
         wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
         self.m_tool = self.m_toolBar2.AddTool(wx.ID_ANY, u"tool", \
-        wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), \
+        wx.Bitmap( os.path.realpath("frame/icons/toolbars/software.png"), \
         wx.BITMAP_TYPE_ANY), \
         wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
         self.m_too2 = self.m_toolBar2.AddTool( wx.ID_ANY, u"tool", \
-        wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), \
+        wx.Bitmap( os.path.realpath("frame/icons/toolbars/software.png"), \
         wx.BITMAP_TYPE_ANY ), \
         wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
         self.m_too3 = self.m_toolBar2.AddTool( wx.ID_ANY, u"tool", \
-        wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), \
+        wx.Bitmap( os.path.realpath("frame/icons/toolbars/software.png"), \
         wx.BITMAP_TYPE_ANY ), \
         wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
         self.m_toolBar2.Realize() 
@@ -64,7 +67,7 @@ class CStaticBitmap(wx.StaticBitmap,wx.Bitmap):
     """
     def __init__(self,*args,**kwds):
         super(CStaticBitmap,self).__init__(*args,**kwds)        
-        self.Bitmap=wx.Bitmap(os.path.realpath("PosPy/frame/icons/store.png"),wx.BITMAP_TYPE_ANY)
+        self.Bitmap=wx.Bitmap(os.path.realpath("frame/icons/store.png"),wx.BITMAP_TYPE_ANY)
       
         """disini sudah bisa """
         return None

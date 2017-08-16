@@ -1,8 +1,0 @@
-// Place your settings in this file to overwrite default and user settings.
-{
-    "python.pythonPath": "/home/pmc/.virtualenvs/ormpony/bin/python",
-    "python.autoComplete.extraPaths": [
-        "/home/pmc/mygit/PointofSalePy/PosPy/mainframe",
-        "/home/pmc/mygit/PointofSalePy/PosPy"
-    ],"
-}
