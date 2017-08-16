@@ -6,8 +6,10 @@
 ##
 ## PLEASE DO "NOT" EDIT THIS FILE!
 ###########################################################################
-from frame.custom import CToolbar
+
 from frame.custom import CStaticBitmap
+from frame.custom import CDataListCtrl
+from frame.custom import CToolbar
 import wx
 import wx.xrc
 
@@ -274,7 +276,7 @@ class FForm ( wx.Frame ):
 ## Class FPenjualan
 ###########################################################################
 
-class FPenjualan (CToolbar):
+class FPenjualan ( CToolbar ):
 	
 	def __init__( self, parent ):
 		CToolbar.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 1280,600 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
@@ -366,7 +368,7 @@ class FPenjualan (CToolbar):
 		
 		bSizer12.Add( fgSizer4, 1, wx.EXPAND, 5 )
 		
-		self.m_listCtrl1 = wx.ListCtrl( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_REPORT )
+		self.m_listCtrl1 = CDataListCtrl( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_REPORT )
 		self.m_listCtrl1.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOW ) )
 		self.m_listCtrl1.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		

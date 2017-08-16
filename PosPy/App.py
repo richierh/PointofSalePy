@@ -10,7 +10,7 @@ class Begin(begin.MyApp):
     def __init__(self, *args, **kwds):
         """Kode ini adalah program utama untuk menjalankan aplikasi"""
         super(Begin, self).__init__(*args, **kwds)
-        self.app = begin.MyApp(0)
-        self.app.MainLoop()
+        self.app = self.StartApp()
+        self.Loop()
 
 Begin()
