@@ -82,16 +82,18 @@ class FUtamaEvent(fm.FUtama):
     """
     def __init__(self, *args, **kwds):
         """
+        docstring
         """
         super(FUtamaEvent, self).__init__(*args, **kwds)
-        self.nyala = fm.FUtama(self)        
+        
     def m_button1OnButtonClick(self, event):
         """
         docstring
         """
         self.frame = FPenjualanEvent(self)
+        self.frame.Show()
         event.Skip()
-        return self.frame.Show()
+        return 
 
     def m_button2OnButtonClick(self, event):
         """
