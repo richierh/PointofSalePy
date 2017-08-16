@@ -14,8 +14,6 @@ class CToolbar(wx.Frame):
         """
         """
         #import frame.icons.getdir
-
-
         self.m_toolBar2=self.CreateToolBar(style=wx.TB_DEFAULT_STYLE,id=wx.ID_ANY)
         self.m_toolBar2.SetToolBitmapSize((50, 50))
         self.m_tool6 = self.m_toolBar2.AddTool(wx.ID_ANY, u"tool", \

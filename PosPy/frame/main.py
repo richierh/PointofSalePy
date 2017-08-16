@@ -12,11 +12,8 @@ class MyApp(wx.App, EventU.FUtamaEvent):
     def __init__(self, *args, **kwds):
         """docstring"""
         super(MyApp, self).__init__(*args, **kwds)
-
-    def StartApp(self):    
         self.frame = EventU.FUtamaEvent(None)
         self.SetTopWindow(self.frame)
         self.frame.Show()
-    def Loop(self):
         self.MainLoop()
-MyApp()        
+        
