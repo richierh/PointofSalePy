@@ -285,13 +285,13 @@ class FPenjualan ( CToolbar ):
 		
 		bSizer10 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_panel4 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel4 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_panel4.SetForegroundColour( wx.Colour( 255, 255, 255 ) )
 		self.m_panel4.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		
 		bSizer11 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_panel9 = wx.Panel( self.m_panel4, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel9 = wx.Panel( self.m_panel4, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_panel9.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		
 		bSizer12 = wx.BoxSizer( wx.VERTICAL )
@@ -303,16 +303,14 @@ class FPenjualan ( CToolbar ):
 		fgSizer4.AddGrowableCol( 3 )
 		fgSizer4.AddGrowableCol( 4 )
 		fgSizer4.AddGrowableCol( 5 )
-		fgSizer4.AddGrowableRow( 0 )
-		fgSizer4.AddGrowableRow( 1 )
-		fgSizer4.SetFlexibleDirection( wx.HORIZONTAL )
+		fgSizer4.SetFlexibleDirection( wx.BOTH )
 		fgSizer4.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_ALL )
 		
 		self.m_staticText16 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"No", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText16.Wrap( -1 )
 		self.m_staticText16.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
-		fgSizer4.Add( self.m_staticText16, 1, wx.ALL|wx.ALIGN_BOTTOM, 5 )
+		fgSizer4.Add( self.m_staticText16, 1, wx.ALL|wx.ALIGN_BOTTOM|wx.EXPAND, 5 )
 		
 		self.m_staticText17 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"A", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText17.Wrap( -1 )
@@ -324,7 +322,7 @@ class FPenjualan ( CToolbar ):
 		self.m_staticText18.Wrap( -1 )
 		self.m_staticText18.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
-		fgSizer4.Add( self.m_staticText18, 1, wx.ALL|wx.ALIGN_BOTTOM, 5 )
+		fgSizer4.Add( self.m_staticText18, 0, wx.ALL|wx.ALIGN_BOTTOM, 5 )
 		
 		self.m_staticText19 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"C", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText19.Wrap( -1 )
@@ -344,33 +342,66 @@ class FPenjualan ( CToolbar ):
 		
 		fgSizer4.Add( self.m_staticText21, 0, wx.ALL|wx.ALIGN_BOTTOM, 5 )
 		
-		self.m_textCtrl13 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl13 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, u"c", wx.DefaultPosition, wx.Size( 200,-1 ), 0 )
+		self.m_textCtrl13.SetFont( wx.Font( 13, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		
 		fgSizer4.Add( self.m_textCtrl13, 1, wx.ALL|wx.EXPAND, 5 )
 		
-		self.m_textCtrl14 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl14 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 300,-1 ), 0 )
+		self.m_textCtrl14.SetFont( wx.Font( 13, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		self.m_textCtrl14.Enable( False )
+		
 		fgSizer4.Add( self.m_textCtrl14, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.m_textCtrl15 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl15.SetFont( wx.Font( 13, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		self.m_textCtrl15.Enable( False )
+		
 		fgSizer4.Add( self.m_textCtrl15, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.m_textCtrl16 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl16.SetFont( wx.Font( 13, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		
 		fgSizer4.Add( self.m_textCtrl16, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.m_textCtrl17 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl17.SetFont( wx.Font( 13, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		self.m_textCtrl17.Enable( False )
+		
 		fgSizer4.Add( self.m_textCtrl17, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.m_textCtrl18 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl18.SetFont( wx.Font( 13, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 		self.m_textCtrl18.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_BTNTEXT ) )
 		self.m_textCtrl18.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		self.m_textCtrl18.Enable( False )
 		
 		fgSizer4.Add( self.m_textCtrl18, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		
 		bSizer12.Add( fgSizer4, 1, wx.EXPAND, 5 )
 		
+		bSizer15 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_button161 = wx.Button( self.m_panel9, wx.ID_ANY, u"Ok", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer15.Add( self.m_button161, 0, wx.ALL, 5 )
+		
+		self.m_button17 = wx.Button( self.m_panel9, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer15.Add( self.m_button17, 0, wx.ALL, 5 )
+		
+		self.m_button18 = wx.Button( self.m_panel9, wx.ID_ANY, u"Kuantiti", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer15.Add( self.m_button18, 0, wx.ALL, 5 )
+		
+		self.m_button19 = wx.Button( self.m_panel9, wx.ID_ANY, u"Manual", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer15.Add( self.m_button19, 0, wx.ALL, 5 )
+		
+		
+		bSizer12.Add( bSizer15, 0, wx.ALIGN_RIGHT, 5 )
+		
 		self.m_listCtrl1 = CDataListCtrl( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_REPORT )
 		self.m_listCtrl1.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOW ) )
 		self.m_listCtrl1.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+		self.m_listCtrl1.Enable( False )
 		
 		bSizer12.Add( self.m_listCtrl1, 6, wx.ALL|wx.EXPAND, 5 )
 		
@@ -380,12 +411,12 @@ class FPenjualan ( CToolbar ):
 		bSizer12.Fit( self.m_panel9 )
 		bSizer11.Add( self.m_panel9, 5, wx.EXPAND |wx.ALL, 5 )
 		
-		self.m_panel10 = wx.Panel( self.m_panel4, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel10 = wx.Panel( self.m_panel4, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_panel10.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		
 		bSizer13 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_panel8 = wx.Panel( self.m_panel10, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel8 = wx.Panel( self.m_panel10, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_panel8.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_INFOTEXT ) )
 		
 		bSizer14 = wx.BoxSizer( wx.VERTICAL )
@@ -405,7 +436,7 @@ class FPenjualan ( CToolbar ):
 		bSizer14.Fit( self.m_panel8 )
 		bSizer13.Add( self.m_panel8, 1, wx.EXPAND |wx.ALL, 5 )
 		
-		self.m_panel92 = wx.Panel( self.m_panel10, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel92 = wx.Panel( self.m_panel10, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_panel92.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		
 		bSizer13.Add( self.m_panel92, 1, wx.EXPAND |wx.ALL, 5 )

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-"""Kode ini adalah program utama untuk menjalankan aplikasi"""
+"""This code is the starting python Apps to running"""
 
 import frame.main as begin
 
