@@ -1,59 +1,29 @@
 #!/usr/bin/python
 
-import wx
 import os
-#from mainframe import FPenjualan
-#import mainframe
-import wx.dataview
+#$import wx.dataview
+import wx
 
 class CToolbar(wx.Frame):
 
     def __init__(self,*args,**kwds):
         super(CToolbar,self).__init__(None)
-        self.SetTitle=("")
-        self.SetPosition(wx.DefaultPosition)
-        self.SetSizeHints( wx.Size( -1,-1 ), wx.Size( -1,-1 ) )
 
-        self.m_toolBar2 = self.CreateToolBar( wx.TB_HORIZONTAL, wx.ID_ANY ) 
-        self.m_tool6 = self.m_toolBar2.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-        
-        self.m_tool7 = self.m_toolBar2.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-
-        self.m_tool8 = self.m_toolBar2.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-
-        self.m_tool = self.m_toolBar2.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-        
-        self.m_too2 = self.m_toolBar2.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-
-        self.m_too3 = self.m_toolBar2.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( os.path.realpath("PosPy/frame/icons/toolbars/software.png"), wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-
-        self.m_toolBar2.Realize() 
 
 
 """
 check this
 """
-class CDataViewListCtrl( wx.Panel ):
+class CDataViewListCtrl( wx.ListCtrl ):
     
     def __init__( self, *args,**kwds):
         super (CDataViewListCtrl,self).__init__(*args,**kwds)
-        self.bSizer13 = wx.BoxSizer( wx.VERTICAL )
-        
-        self.m_dataViewListCtrl1 = wx.dataview.DataViewListCtrl( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
-        
-        ## Set a Column Label
-
-        self.m_dataViewListCtrl1.AppendTextColumn("No",width=35,align=wx.ALIGN_CENTER)
-        self.m_dataViewListCtrl1.AppendTextColumn("A",width= 100,align=wx.ALIGN_CENTER)
-        self.m_dataViewListCtrl1.AppendTextColumn("B",width= 200,align=wx.ALIGN_CENTER)
-        self.m_dataViewListCtrl1.AppendTextColumn("c",width= 200,align=wx.ALIGN_CENTER)
-        self.m_dataViewListCtrl1.AppendTextColumn("D",width= 200,align=wx.ALIGN_CENTER)
-        self.m_dataViewListCtrl1.AppendTextColumn("E",width= 200,align=wx.ALIGN_CENTER)
-
-        self.bSizer13.Add( self.m_dataViewListCtrl1, 1,wx.EXPAND, wx.ALL, 5 )
-        self.SetSizer( self.bSizer13 )
-    
-    
+       
+        mycolumns=["A","B","C","D","E"]
+        mywidth=[50,250,300,200,200]
+        heading = list(mycolumns)
+        print (len(mycolumns))
+        l = [self.InsertColumn(i,heading=(str(heading[i])),width=mywidth[i]) for i in range(len(mycolumns))]
 
 class CStaticBitmap(wx.StaticBitmap,wx.Bitmap):
     """
@@ -62,6 +32,7 @@ class CStaticBitmap(wx.StaticBitmap,wx.Bitmap):
     def __init__(self,*args,**kwds):
         super(CStaticBitmap,self).__init__(*args,**kwds)        
         self.Bitmap=wx.Bitmap(os.path.realpath("PosPy/frame/icons/store.png"),wx.BITMAP_TYPE_ANY)
+      
         """disini sudah bisa """
         return None
     
