@@ -1,6 +1,16 @@
-from frame.main import MyApp
+#!/usr/bin/python
+"""Kode ini adalah program utama untuk menjalankan aplikasi"""
 
-# Kode ini adalah program utama untuk menjalankan aplikasi
+import frame.main as begin
 
-app = MyApp(0)
-app.MainLoop()
+class Begin(begin.MyApp):
+
+    """Kode ini adalah program utama untuk menjalankan aplikasi"""
+
+    def __init__(self, *args, **kwds):
+        """Kode ini adalah program utama untuk menjalankan aplikasi"""
+        super(Begin, self).__init__(*args, **kwds)
+        self.app = begin.MyApp(0)
+        self.app.MainLoop()
+
+Begin()
