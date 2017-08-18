@@ -102,6 +102,7 @@ class FUtama ( wx.Frame ):
 		self.Centre( wx.BOTH )
 		
 		# Connect Events
+		self.Bind( wx.EVT_CLOSE, self.FUtamaOnClose )
 		self.m_button1.Bind( wx.EVT_BUTTON, self.m_button1OnButtonClick )
 		self.m_button2.Bind( wx.EVT_BUTTON, self.m_button2OnButtonClick )
 		self.m_button3.Bind( wx.EVT_BUTTON, self.m_button3OnButtonClick )
@@ -113,6 +114,9 @@ class FUtama ( wx.Frame ):
 	
 	
 	# Virtual event handlers, overide them in your derived class
+	def FUtamaOnClose( self, event ):
+		event.Skip()
+	
 	def m_button1OnButtonClick( self, event ):
 		event.Skip()
 	
@@ -361,6 +365,7 @@ class FPenjualan ( CToolbar ):
 		
 		self.m_textCtrl16 = wx.TextCtrl( self.m_panel9, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_textCtrl16.SetFont( wx.Font( 13, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		self.m_textCtrl16.Enable( False )
 		
 		fgSizer4.Add( self.m_textCtrl16, 1, wx.ALL|wx.EXPAND, 5 )
 		
@@ -462,9 +467,17 @@ class FPenjualan ( CToolbar ):
 		
 		self.SetMenuBar( self.MenuPenjualan )
 		
+		
+		# Connect Events
+		self.Bind( wx.EVT_CLOSE, self.FPenjualanOnClose )
 	
 	def __del__( self ):
 		pass
+	
+	
+	# Virtual event handlers, overide them in your derived class
+	def FPenjualanOnClose( self, event ):
+		event.Skip()
 	
 
 ###########################################################################
