@@ -16,8 +16,4 @@ class MyApp(wx.App, EventU.FUtamaEvent):
         self.SetTopWindow(self.frame)
         self.frame.Show()
         self.MainLoop()
-<<<<<<< HEAD
-MyApp()
-=======
         
->>>>>>> 710c47374133668c0b65f5d7b2c617e4330c30ad
