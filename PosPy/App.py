@@ -2,6 +2,7 @@
 """This code is the starting python Apps to running"""
 
 import frame.main as begin
+<<<<<<< HEAD
 
 class Begin(begin.MyApp):
     """Kode ini adalah program utama untuk menjalankan aplikasi"""
@@ -10,3 +11,5 @@ class Begin(begin.MyApp):
         super(Begin, self).__init__(*args, **kwds)
         self.app = self.MyApp()
 Begin()
+=======
+>>>>>>> d06626479329d1a6bff31c1f16326c66d6d05f62

@@ -4,6 +4,7 @@ docstring
 """
 import frame.mainframe as fm
 
+
 class FFormEvent(fm.FForm):
     """
     docstring
@@ -65,7 +66,7 @@ class FFormEvent(fm.FForm):
         event.Skip()
 
 class FPenjualanEvent(fm.FPenjualan\
-, fm.FUtama):
+):
     """
     docstring
     """
@@ -75,7 +76,8 @@ class FPenjualanEvent(fm.FPenjualan\
         super(FPenjualanEvent, self).__init__(*args, **kwds)
         self.Maximize(True)
         return None
-
+    def FPenjualanOnClose(self,event):
+        event.Skip()
 class FUtamaEvent(fm.FUtama):
     """
     docstring
@@ -85,16 +87,22 @@ class FUtamaEvent(fm.FUtama):
         docstring
         """
         super(FUtamaEvent, self).__init__(*args, **kwds)
+        self.framepenj = fm.FPenjualan(self)
+
         
     def m_button1OnButtonClick(self, event):
         """
         docstring
         """
-        self.frame = FPenjualanEvent(self)
-        self.frame.Show()
+        try:
+            self.framepenj.Maximize()
+            self.framepenj.Show()
+        except:
+            self.framepenj = fm.FPenjualan(self)
+            self.framepenj.Maximize()
+            self.framepenj.Show()
         event.Skip()
         return 
-
     def m_button2OnButtonClick(self, event):
         """
         docstring
@@ -119,3 +127,11 @@ class FUtamaEvent(fm.FUtama):
         """
         event.Skip()
         return None
+    def FUtamaOnClose(self,event):
+        try:
+            self.framepenj.Destroy()
+            self.Destroy()
+        except:
+            self.Destroy()
+        event.Skip()
+        return None   
