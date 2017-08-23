@@ -162,7 +162,7 @@ class FForm ( wx.Frame ):
 		fgSizer2.SetFlexibleDirection( wx.BOTH )
 		fgSizer2.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 		
-		self.m_staticText1 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText1 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label A", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText1.Wrap( -1 )
 		fgSizer2.Add( self.m_staticText1, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
 		
@@ -170,43 +170,43 @@ class FForm ( wx.Frame ):
 		self.m_textCtrl1.SetMaxLength( 0 ) 
 		fgSizer2.Add( self.m_textCtrl1, 0, wx.ALL, 5 )
 		
-		self.m_staticText2 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText2 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label B", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText2.Wrap( -1 )
 		fgSizer2.Add( self.m_staticText2, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 		
-		self.m_textCtrl2 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl2 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
 		self.m_textCtrl2.SetMaxLength( 0 ) 
 		fgSizer2.Add( self.m_textCtrl2, 0, wx.ALL, 5 )
 		
-		self.m_staticText3 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText3 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label 3", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText3.Wrap( -1 )
 		fgSizer2.Add( self.m_staticText3, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 		
-		self.m_textCtrl3 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl3 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
 		self.m_textCtrl3.SetMaxLength( 0 ) 
 		fgSizer2.Add( self.m_textCtrl3, 0, wx.ALL, 5 )
 		
-		self.m_staticText4 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText4 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label 4", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText4.Wrap( -1 )
 		fgSizer2.Add( self.m_staticText4, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 		
-		self.m_textCtrl4 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl4 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
 		self.m_textCtrl4.SetMaxLength( 0 ) 
 		fgSizer2.Add( self.m_textCtrl4, 0, wx.ALL, 5 )
 		
-		self.m_staticText5 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText5 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label 6", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText5.Wrap( -1 )
 		fgSizer2.Add( self.m_staticText5, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 		
-		self.m_textCtrl5 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl5 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
 		self.m_textCtrl5.SetMaxLength( 0 ) 
 		fgSizer2.Add( self.m_textCtrl5, 0, wx.ALL, 5 )
 		
-		self.m_staticText6 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText6 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label 7", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText6.Wrap( -1 )
 		fgSizer2.Add( self.m_staticText6, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 		
-		self.m_textCtrl6 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_textCtrl6 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
 		self.m_textCtrl6.SetMaxLength( 0 ) 
 		fgSizer2.Add( self.m_textCtrl6, 0, wx.ALL, 5 )
 		
@@ -525,41 +525,128 @@ class MyPanel1 ( wx.Panel ):
 	
 
 ###########################################################################
-## Class MyFrame5
+## Class FPengaturan
 ###########################################################################
 
-class MyFrame5 ( wx.Frame ):
+class FPengaturan ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Pengaturan", pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.CLOSE_BOX|wx.SYSTEM_MENU|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		
-		self.m_toolBar3 = self.CreateToolBar( wx.TB_HORIZONTAL, wx.ID_ANY ) 
-		self.m_tool10 = self.m_toolBar3.AddLabelTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
+		bSizer16 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_toolBar3.Realize() 
+		self.m_panel9 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel9.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		self.m_panel9.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_INFOTEXT ) )
 		
+		bSizer17 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_staticText16 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"Pengaturan", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText16.Wrap( -1 )
+		self.m_staticText16.SetFont( wx.Font( 15, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		
+		bSizer17.Add( self.m_staticText16, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		
+		fgSizer4 = wx.FlexGridSizer( 0, 2, 0, 0 )
+		fgSizer4.AddGrowableCol( 0 )
+		fgSizer4.AddGrowableCol( 1 )
+		fgSizer4.AddGrowableRow( 0 )
+		fgSizer4.AddGrowableRow( 1 )
+		fgSizer4.AddGrowableRow( 2 )
+		fgSizer4.AddGrowableRow( 3 )
+		fgSizer4.AddGrowableRow( 4 )
+		fgSizer4.AddGrowableRow( 5 )
+		fgSizer4.SetFlexibleDirection( wx.BOTH )
+		fgSizer4.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+		
+		self.m_staticText17 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText17.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText17, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_staticText18 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText18.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText18, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_button18 = wx.Button( self.m_panel9, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_button18, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_button19 = wx.Button( self.m_panel9, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_button19, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		
+		self.m_staticText19 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText19.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText19, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		
+		self.m_staticText20 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText20.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText20, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		
+		self.m_button20 = wx.Button( self.m_panel9, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_button20, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_button21 = wx.Button( self.m_panel9, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_button21, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		
+		self.m_staticText21 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText21.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText21, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_staticText22 = wx.StaticText( self.m_panel9, wx.ID_ANY, u"MyLabel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText22.Wrap( -1 )
+		fgSizer4.Add( self.m_staticText22, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		
+		self.m_button22 = wx.Button( self.m_panel9, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_button22, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_button23 = wx.Button( self.m_panel9, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer4.Add( self.m_button23, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		
+		bSizer17.Add( fgSizer4, 1, wx.EXPAND, 5 )
+		
+		
+		self.m_panel9.SetSizer( bSizer17 )
+		self.m_panel9.Layout()
+		bSizer17.Fit( self.m_panel9 )
+		bSizer16.Add( self.m_panel9, 1, wx.EXPAND |wx.ALL, 5 )
+		
+		
+		self.SetSizer( bSizer16 )
+		self.Layout()
 		
 		self.Centre( wx.BOTH )
+		
+		# Connect Events
+		self.m_button18.Bind( wx.EVT_BUTTON, self.m_button18OnButtonClick )
+		self.m_button19.Bind( wx.EVT_BUTTON, self.m_button19OnButtonClick )
+		self.m_button20.Bind( wx.EVT_BUTTON, self.m_button20OnButtonClick )
+		self.m_button21.Bind( wx.EVT_BUTTON, self.m_button21OnButtonClick )
+		self.m_button22.Bind( wx.EVT_BUTTON, self.m_button22OnButtonClick )
+		self.m_button23.Bind( wx.EVT_BUTTON, self.m_button23OnButtonClick )
 	
 	def __del__( self ):
 		pass
 	
-
-###########################################################################
-## Class MyToolBar1
-###########################################################################
-
-class MyToolBar1 ( wx.ToolBar ):
 	
-	def __init__( self, parent ):
-		wx.ToolBar.__init__ ( self, parent, id = wx.ID_ANY, pos = wx.DefaultPosition, size = wx.DefaultSize, style = wx.TB_HORIZONTAL )
-		
-		
-		self.Realize()
+	# Virtual event handlers, overide them in your derived class
+	def m_button18OnButtonClick( self, event ):
+		event.Skip()
 	
-	def __del__( self ):
-		pass
+	def m_button19OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button20OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button21OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button22OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button23OnButtonClick( self, event ):
+		event.Skip()
 	
 
