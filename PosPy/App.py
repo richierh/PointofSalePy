@@ -1,4 +1,4 @@
 #!/usr/bin/python
-"""This code is the starting python Apps to running"""
-
+"""Now starting python Apps to running"""
+print (__doc__)
 import frame.main as begin

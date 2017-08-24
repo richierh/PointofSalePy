@@ -98,6 +98,21 @@ class FUtama ( wx.Frame ):
 		
 		self.SetSizer( bSizer1 )
 		self.Layout()
+		self.m_menubar2 = wx.MenuBar( 0 )
+		self.m_menu2 = wx.Menu()
+		self.m_menubar2.Append( self.m_menu2, u"Berkas" ) 
+		
+		self.m_menu3 = wx.Menu()
+		self.m_menuItem2 = wx.MenuItem( self.m_menu3, wx.ID_ANY, u"Data", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu3.AppendItem( self.m_menuItem2 )
+		
+		self.m_menubar2.Append( self.m_menu3, u"Pengaturan" ) 
+		
+		self.m_menu4 = wx.Menu()
+		self.m_menubar2.Append( self.m_menu4, u"Bantuan" ) 
+		
+		self.SetMenuBar( self.m_menubar2 )
+		
 		
 		self.Centre( wx.BOTH )
 		
@@ -108,6 +123,7 @@ class FUtama ( wx.Frame ):
 		self.m_button3.Bind( wx.EVT_BUTTON, self.m_button3OnButtonClick )
 		self.m_button4.Bind( wx.EVT_BUTTON, self.m_button4OnButtonClick )
 		self.m_button5.Bind( wx.EVT_BUTTON, self.m_button5OnButtonClick )
+		self.Bind( wx.EVT_MENU, self.m_menuItem2OnMenuSelection, id = self.m_menuItem2.GetId() )
 	
 	def __del__( self ):
 		pass
@@ -130,6 +146,9 @@ class FUtama ( wx.Frame ):
 		event.Skip()
 	
 	def m_button5OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_menuItem2OnMenuSelection( self, event ):
 		event.Skip()
 	
 

@@ -79,13 +79,17 @@ class FPenjualanEvent(fm.FPenjualan):
 
 class FUtamaEvent(fm.FUtama):
     """
-    docstring
+    Entering MainFrame
+    Rezky Bau Kentut
+    dan Ahra Bau Kentut
     """
+
     def __init__(self, *args, **kwds):
         """
-        docstring
+        Masuk Rangka
         """
         super(FUtamaEvent, self).__init__(*args, **kwds)
+        print (FUtamaEvent.__doc__)
         self.framepenj = FPenjualanEvent(self)
         self.framepeng = FPengaturanEvent(self)
 
@@ -94,6 +98,7 @@ class FUtamaEvent(fm.FUtama):
         """
         docstring
         """
+        print ("Menu Penjualan")
         try:
             self.framepenj.Maximize()
             self.framepenj.Show()
@@ -140,7 +145,17 @@ class FUtamaEvent(fm.FUtama):
         except:
             self.Destroy()
         event.Skip()
-        return None   
+        return None
+    def m_menuItem2OnMenuSelection( self, event ):
+        try:
+            self.framepeng.Show()
+        except:
+            self.framepeng = FPengaturanEvent(self)
+            self.framepeng.Show()
+        event.Skip()
+        return None
+        event.Skip()
+       
 class FPengaturanEvent(fm.FPengaturan):
     """
     docstring
