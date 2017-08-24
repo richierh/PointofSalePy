@@ -128,10 +128,12 @@ class FUtamaEvent(fm.FUtama):
         event.Skip()
         return None
     def FUtamaOnClose(self,event):
-        try:
-            self.framepenj.Destroy()
-            self.Destroy()
-        except:
-            self.Destroy()
+        #mylists = [self.framepenj.Destroy()]
+        #try:
+        #dest = [mylist for mylist in range(1)]
+        #self.Destroy()
+        #except:
+        #self.Destroy()
         event.Skip()
         return None   
+
