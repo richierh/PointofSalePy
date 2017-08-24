@@ -80,10 +80,7 @@ class FPenjualanEvent(fm.FPenjualan):
 class FUtamaEvent(fm.FUtama):
     """
     Entering MainFrame
-    Rezky Bau Kentut
-    dan Ahra Bau Kentut
     """
-
     def __init__(self, *args, **kwds):
         """
         Masuk Rangka
