@@ -1,10 +1,10 @@
 #!/usr/bin/python
 """
-docstring
+This is the code for any of event handler being stack
 """
 import frame.mainframe as fm
 
-
+print (__doc__)
 class FFormEvent(fm.FForm):
     """
     docstring

@@ -669,3 +669,76 @@ class FPengaturan ( wx.Frame ):
 		event.Skip()
 	
 
+###########################################################################
+## Class Import Data
+###########################################################################
+
+class Import Data ( wx.Panel ):
+	
+	def __init__( self, parent ):
+		wx.Panel.__init__ ( self, parent, id = wx.ID_ANY, pos = wx.DefaultPosition, size = wx.Size( 200,200 ), style = wx.TAB_TRAVERSAL )
+		
+		self.SetMinSize( wx.Size( 200,200 ) )
+		self.SetMaxSize( wx.Size( 200,200 ) )
+		
+		bSizer18 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_staticText23 = wx.StaticText( self, wx.ID_ANY, u"Silahkan Pilih File untuk di import (xls)", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText23.Wrap( -1 )
+		bSizer18.Add( self.m_staticText23, 1, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		
+		self.m_filePicker1 = wx.FilePickerCtrl( self, wx.ID_ANY, u"/home/richie/document.xml", u"Select a file", u"*.*", wx.DefaultPosition, wx.DefaultSize, wx.FLP_DEFAULT_STYLE )
+		bSizer18.Add( self.m_filePicker1, 1, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.EXPAND, 5 )
+		
+		self.m_button24 = wx.Button( self, wx.ID_ANY, u"Proses", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer18.Add( self.m_button24, 1, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.EXPAND, 5 )
+		
+		
+		bSizer18.Add( self.m_customControl1, 1, wx.ALL|wx.EXPAND, 5 )
+		
+		self.m_button25 = wx.Button( self, wx.ID_ANY, u"Batal", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer18.Add( self.m_button25, 1, wx.ALL|wx.EXPAND, 5 )
+		
+		
+		self.SetSizer( bSizer18 )
+		self.Layout()
+	
+	def __del__( self ):
+		pass
+	
+
+###########################################################################
+## Class MyFrame10
+###########################################################################
+
+class MyFrame10 ( wx.Frame ):
+	
+	def __init__( self, parent ):
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		
+		bSizer35 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_panel19 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer36 = wx.BoxSizer( wx.VERTICAL )
+		
+		
+		bSizer36.Add( self.m_customControl3, 1, wx.ALL|wx.EXPAND, 5 )
+		
+		
+		self.m_panel19.SetSizer( bSizer36 )
+		self.m_panel19.Layout()
+		bSizer36.Fit( self.m_panel19 )
+		bSizer35.Add( self.m_panel19, 1, wx.EXPAND |wx.ALL, 5 )
+		
+		
+		self.SetSizer( bSizer35 )
+		self.Layout()
+		
+		self.Centre( wx.BOTH )
+	
+	def __del__( self ):
+		pass
+	
+

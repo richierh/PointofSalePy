@@ -42,10 +42,8 @@ class CToolbar(wx.Frame):
         wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
         self.m_toolBar2.Realize() 
 
-
-"""
-check this
-"""
+###Class making list control
+###This class would make list control in the "Penjualan" Frame
 class CDataListCtrl( wx.ListCtrl ):
     
     def __init__( self, *args,**kwds):
