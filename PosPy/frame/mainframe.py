@@ -7,9 +7,6 @@
 ## PLEASE DO "NOT" EDIT THIS FILE!
 ###########################################################################
 
-from frame.custom import CStaticBitmap
-from frame.custom import CDataListCtrl
-from frame.custom import CToolbar
 import wx
 import wx.xrc
 
@@ -20,9 +17,9 @@ import wx.xrc
 class FUtama ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"SOFTWARE", pos = wx.DefaultPosition, size = wx.Size( 500,350 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"SOFTWARE", pos = wx.DefaultPosition, size = wx.Size( 500,400 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 		
-		self.SetSizeHintsSz( wx.Size( 500,350 ), wx.Size( -1,-1 ) )
+		self.SetSizeHintsSz( wx.Size( 500,400 ), wx.Size( -1,-1 ) )
 		
 		bSizer1 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -77,7 +74,7 @@ class FUtama ( wx.Frame ):
 		
 		bSizer2.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
-		self.m_bitmap2 = CStaticBitmap( self.m_panel2, wx.ID_ANY, wx.NullBitmap, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_bitmap2 = wx.StaticBitmap( self.m_panel2, wx.ID_ANY, wx.Bitmap( u"/home/pmc/mygit/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer2.Add( self.m_bitmap2, 3, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.EXPAND, 5 )
 		
 		
@@ -299,10 +296,10 @@ class FForm ( wx.Frame ):
 ## Class FPenjualan
 ###########################################################################
 
-class FPenjualan ( CToolbar ):
+class FPenjualan ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		CToolbar.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 1280,600 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Form Penjualan", pos = wx.Point( 600,300 ), size = wx.Size( 1280,600 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.Size( 900,600 ), wx.Size( -1,-1 ) )
 		
@@ -422,7 +419,7 @@ class FPenjualan ( CToolbar ):
 		
 		bSizer12.Add( bSizer15, 0, wx.ALIGN_RIGHT, 5 )
 		
-		self.m_listCtrl1 = CDataListCtrl( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_REPORT )
+		self.m_listCtrl1 = wx.ListCtrl( self.m_panel9, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_REPORT )
 		self.m_listCtrl1.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOW ) )
 		self.m_listCtrl1.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		self.m_listCtrl1.Enable( False )
@@ -486,9 +483,32 @@ class FPenjualan ( CToolbar ):
 		
 		self.SetMenuBar( self.MenuPenjualan )
 		
+		self.m_toolBar4 = self.CreateToolBar( wx.TB_HORIZONTAL, wx.ID_ANY ) 
+		self.m_tool3 = self.m_toolBar4.AddLabelTool( wx.ID_ANY, u"tool", wx.Bitmap( u"/home/pmc/mygit/PointofSalePy/PosPy/frame/icons/toolbars/software.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
+		
+		self.m_tool4 = self.m_toolBar4.AddLabelTool( wx.ID_ANY, u"tool", wx.Bitmap( u"/home/pmc/mygit/PointofSalePy/PosPy/frame/icons/toolbars/software.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
+		
+		self.m_tool5 = self.m_toolBar4.AddLabelTool( wx.ID_ANY, u"tool", wx.Bitmap( u"/home/pmc/mygit/PointofSalePy/PosPy/frame/icons/toolbars/software.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
+		
+		self.m_tool6 = self.m_toolBar4.AddLabelTool( wx.ID_ANY, u"tool", wx.Bitmap( u"/home/pmc/mygit/PointofSalePy/PosPy/frame/icons/toolbars/software.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
+		
+		self.m_toolBar4.Realize() 
+		
 		
 		# Connect Events
 		self.Bind( wx.EVT_CLOSE, self.FPenjualanOnClose )
+		self.m_textCtrl13.Bind( wx.EVT_TEXT, self.m_textCtrl13OnText )
+		self.m_button161.Bind( wx.EVT_BUTTON, self.m_button161OnButtonClick )
+		self.m_button17.Bind( wx.EVT_BUTTON, self.m_button17OnButtonClick )
+		self.m_button18.Bind( wx.EVT_BUTTON, self.m_button18OnButtonClick )
+		self.m_button19.Bind( wx.EVT_BUTTON, self.m_button19OnButtonClick )
+		self.m_button14.Bind( wx.EVT_BUTTON, self.m_button14OnButtonClick )
+		self.m_button15.Bind( wx.EVT_BUTTON, self.m_button15OnButtonClick )
+		self.m_button16.Bind( wx.EVT_BUTTON, self.m_button16OnButtonClick )
+		self.Bind( wx.EVT_TOOL, self.m_tool3OnToolClicked, id = self.m_tool3.GetId() )
+		self.Bind( wx.EVT_TOOL, self.m_tool4OnToolClicked, id = self.m_tool4.GetId() )
+		self.Bind( wx.EVT_TOOL, self.m_tool5OnToolClicked, id = self.m_tool5.GetId() )
+		self.Bind( wx.EVT_TOOL, self.m_tool6OnToolClicked, id = self.m_tool6.GetId() )
 	
 	def __del__( self ):
 		pass
@@ -496,6 +516,42 @@ class FPenjualan ( CToolbar ):
 	
 	# Virtual event handlers, overide them in your derived class
 	def FPenjualanOnClose( self, event ):
+		event.Skip()
+	
+	def m_textCtrl13OnText( self, event ):
+		event.Skip()
+	
+	def m_button161OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button17OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button18OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button19OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button14OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button15OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button16OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_tool3OnToolClicked( self, event ):
+		event.Skip()
+	
+	def m_tool4OnToolClicked( self, event ):
+		event.Skip()
+	
+	def m_tool5OnToolClicked( self, event ):
+		event.Skip()
+	
+	def m_tool6OnToolClicked( self, event ):
 		event.Skip()
 	
 
@@ -550,9 +606,11 @@ class MyPanel1 ( wx.Panel ):
 class FPengaturan ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Pengaturan", pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.CLOSE_BOX|wx.SYSTEM_MENU|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Pengaturan", pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		self.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+		self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
 		bSizer16 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -638,6 +696,7 @@ class FPengaturan ( wx.Frame ):
 		self.Centre( wx.BOTH )
 		
 		# Connect Events
+		self.Bind( wx.EVT_CLOSE, self.FPengaturanOnClose )
 		self.m_button18.Bind( wx.EVT_BUTTON, self.m_button18OnButtonClick )
 		self.m_button19.Bind( wx.EVT_BUTTON, self.m_button19OnButtonClick )
 		self.m_button20.Bind( wx.EVT_BUTTON, self.m_button20OnButtonClick )
@@ -650,6 +709,9 @@ class FPengaturan ( wx.Frame ):
 	
 	
 	# Virtual event handlers, overide them in your derived class
+	def FPengaturanOnClose( self, event ):
+		event.Skip()
+	
 	def m_button18OnButtonClick( self, event ):
 		event.Skip()
 	
