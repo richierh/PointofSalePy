@@ -3,16 +3,24 @@
 import wx
 import frame.mainframe as mainframe
 import frame.CForm
+import frame.cdataimport
 
 # Implementing FPengaturan
 class FPengaturanEvent( mainframe.FPengaturan ):
     def __init__( self, parent ):
         mainframe.FPengaturan.__init__( self, parent )
         self.bukaform = frame.CForm.FFormEvent(self)
+        self.dataimport =frame.cdataimport.FDataImportEvent(self)
 
     # Handlers for FPengaturan events.
     def m_button18OnButtonClick( self, event ):
         # TODO: Implement m_button18OnButtonClick
+        try :
+            self.dataimport.Show()
+        except :
+            self.dataimport = frame.cdataimport.FDataImportEvent(self)
+            self.dataimport.Show()
+        
         pass
     
     def m_button19OnButtonClick( self, event ):
@@ -23,7 +31,6 @@ class FPengaturanEvent( mainframe.FPengaturan ):
         except:
             self.bukaform = frame.CForm.FFormEvent(self)
             self.bukaform.Show()
-        event.Skip()
         pass
     
     def m_button20OnButtonClick( self, event ):

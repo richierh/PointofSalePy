@@ -42,7 +42,7 @@ class FUtamaEvent( mainframe.FUtama ):
         try:
             self.framepeng.Show()
         except:
-            self.framepeng = mainframe.frame.CPengaturan.FPengaturanEvent(self)
+            self.framepeng = frame.CPengaturan.FPengaturanEvent(self)
             self.framepeng.Show()
         event.Skip()
         pass

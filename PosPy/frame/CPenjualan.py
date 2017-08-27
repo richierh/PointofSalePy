@@ -23,52 +23,55 @@ class FPenjualanEvent( mainframe.FPenjualan ):
         # TODO: Implement FPenjualanOnClose
         self.Destroy()
         pass
-  
+    def FPenjualanOnChar( self, event ):
+        
+        self.Destroy()
+        pass
    
     def m_textCtrl13OnText( self, event ):
         print (self.m_textCtrl13.GetValue())
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_button161OnButtonClick( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_button17OnButtonClick( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_button18OnButtonClick( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_button19OnButtonClick( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_button14OnButtonClick( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_button15OnButtonClick( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_button16OnButtonClick( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_tool3OnToolClicked( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_tool4OnToolClicked( self, event ):
         print ("This is working")
-        event.Skip()
+        pass
     
     def m_tool5OnToolClicked( self, event ):
-        event.Skip()
+        pass
     
     def m_tool6OnToolClicked( self, event ):
-        event.Skip()
+        pass
     

@@ -496,7 +496,9 @@ class FPenjualan ( wx.Frame ):
 		
 		
 		# Connect Events
+		self.Bind( wx.EVT_CHAR, self.FPenjualanOnChar )
 		self.Bind( wx.EVT_CLOSE, self.FPenjualanOnClose )
+		self.Bind( wx.EVT_KEY_DOWN, self.FPenjualanOnKeyDown )
 		self.m_textCtrl13.Bind( wx.EVT_TEXT, self.m_textCtrl13OnText )
 		self.m_button161.Bind( wx.EVT_BUTTON, self.m_button161OnButtonClick )
 		self.m_button17.Bind( wx.EVT_BUTTON, self.m_button17OnButtonClick )
@@ -515,7 +517,13 @@ class FPenjualan ( wx.Frame ):
 	
 	
 	# Virtual event handlers, overide them in your derived class
+	def FPenjualanOnChar( self, event ):
+		event.Skip()
+	
 	def FPenjualanOnClose( self, event ):
+		event.Skip()
+	
+	def FPenjualanOnKeyDown( self, event ):
 		event.Skip()
 	
 	def m_textCtrl13OnText( self, event ):
@@ -732,10 +740,10 @@ class FPengaturan ( wx.Frame ):
 	
 
 ###########################################################################
-## Class DataImport
+## Class Panel2
 ###########################################################################
 
-class DataImport ( wx.Panel ):
+class Panel2 ( wx.Panel ):
 	
 	def __init__( self, parent ):
 		wx.Panel.__init__ ( self, parent, id = wx.ID_ANY, pos = wx.DefaultPosition, size = wx.Size( 200,200 ), style = wx.TAB_TRAVERSAL )
@@ -743,20 +751,33 @@ class DataImport ( wx.Panel ):
 		self.SetMinSize( wx.Size( 200,200 ) )
 		self.SetMaxSize( wx.Size( 200,200 ) )
 		
+	
+	def __del__( self ):
+		pass
+	
+
+###########################################################################
+## Class FDataImport
+###########################################################################
+
+class FDataImport ( wx.Frame ):
+	
+	def __init__( self, parent ):
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Import", pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		
 		bSizer18 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_staticText23 = wx.StaticText( self, wx.ID_ANY, u"Silahkan Pilih File untuk di import (xls)", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText23.Wrap( -1 )
+		self.m_staticText23 = wx.StaticText( self, wx.ID_ANY, u"Silahkan Pilih File untuk di import (xls)", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTRE|wx.ST_NO_AUTORESIZE )
+		self.m_staticText23.Wrap( 150 )
 		bSizer18.Add( self.m_staticText23, 1, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
-		self.m_filePicker1 = wx.FilePickerCtrl( self, wx.ID_ANY, u"/home/richie/document.xml", u"Select a file", u"*.*", wx.DefaultPosition, wx.DefaultSize, wx.FLP_DEFAULT_STYLE )
+		self.m_filePicker1 = wx.FilePickerCtrl( self, wx.ID_ANY, wx.EmptyString, u"Select a file", u"*.*", wx.DefaultPosition, wx.DefaultSize, wx.FLP_DEFAULT_STYLE )
 		bSizer18.Add( self.m_filePicker1, 1, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.EXPAND, 5 )
 		
 		self.m_button24 = wx.Button( self, wx.ID_ANY, u"Proses", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer18.Add( self.m_button24, 1, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.EXPAND, 5 )
-		
-		
-		bSizer18.Add( self.m_customControl1, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.m_button25 = wx.Button( self, wx.ID_ANY, u"Batal", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer18.Add( self.m_button25, 1, wx.ALL|wx.EXPAND, 5 )
@@ -764,9 +785,19 @@ class DataImport ( wx.Panel ):
 		
 		self.SetSizer( bSizer18 )
 		self.Layout()
+		
+		self.Centre( wx.BOTH )
+		
+		# Connect Events
+		self.m_filePicker1.Bind( wx.EVT_FILEPICKER_CHANGED, self.m_filePicker1OnFileChanged )
 	
 	def __del__( self ):
 		pass
+	
+	
+	# Virtual event handlers, overide them in your derived class
+	def m_filePicker1OnFileChanged( self, event ):
+		event.Skip()
 	
 
 ###########################################################################
