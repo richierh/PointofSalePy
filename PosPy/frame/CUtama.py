@@ -22,8 +22,7 @@ class FUtamaEvent( mainframe.FUtama ):
             self.Destroy()
         except:
             self.Destroy()
-        event.Skip()
-        pass
+        pass      
     
     def m_button1OnButtonClick( self, event ):
         # TODO: Implement m_button1OnButtonClick
@@ -34,7 +33,6 @@ class FUtamaEvent( mainframe.FUtama ):
             self.framepenj =  frame.CPenjualan.FPenjualanEvent(self)
             self.framepenj.Maximize()
             self.framepenj.Show()
-        event.Skip()
         pass
     
     def m_button2OnButtonClick( self, event ):
@@ -44,8 +42,7 @@ class FUtamaEvent( mainframe.FUtama ):
         except:
             self.framepeng = frame.CPengaturan.FPengaturanEvent(self)
             self.framepeng.Show()
-        event.Skip()
-        pass
+        pass        
     
     def m_button3OnButtonClick( self, event ):
         # TODO: Implement m_button3OnButtonClick
@@ -61,6 +58,27 @@ class FUtamaEvent( mainframe.FUtama ):
     
     def m_menuItem2OnMenuSelection( self, event ):
         # TODO: Implement m_menuItem2OnMenuSelection
+        try:         
+            self.framepenj.Maximize()
+            self.framepenj.Show()
+        except:
+            self.framepenj =  frame.CPenjualan.FPenjualanEvent(self)
+            self.framepenj.Maximize()
+            self.framepenj.Show()        
         pass
-    
+    def m_menuItem3OnMenuSelection( self, event ):
+        try:
+            self.framepenj.Maximize()
+            self.framepenj.Show()
+        except:
+            self.framepenj =  frame.CPenjualan.FPenjualanEvent(self)
+            self.framepenj.Maximize()
+            self.framepenj.Show()     
+        pass    
+    def m_menuItem4OnMenuSelection( self, event ):
+        pass    
+    def m_menuItem5OnMenuSelection( self, event ):
+        pass    
+    def m_menuItem2OnMenuSelection( self, event ):
+        pass        
     
