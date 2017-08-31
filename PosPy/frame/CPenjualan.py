@@ -8,7 +8,6 @@ class FPenjualanEvent( mainframe.FPenjualan ):
     def __init__( self, parent ):
         mainframe.FPenjualan.__init__( self, parent )
         self.Maximize(True)
-
         self.mycolumns=["A","B","C","D","E"]
         self.mywidth=[50,250,300,200,200]
         self.heading = list(self.mycolumns)
@@ -20,47 +19,31 @@ class FPenjualanEvent( mainframe.FPenjualan ):
 
     # Handlers for FPenjualan events.
     def FPenjualanOnClose( self, event ):
-        # TODO: Implement FPenjualanOnClose
+        #TODO: Implement FPenjualanOnClose
         self.Destroy()
         pass
-    def FPenjualanOnChar( self, event ):
-        
-        self.Destroy()
-        pass
-   
+    
     def m_textCtrl13OnText( self, event ):
         print (self.m_textCtrl13.GetValue())
         print ("This is working")
         pass
-    
-    def m_button161OnButtonClick( self, event ):
-        print ("This is working")
+
+    def m_textCtrl13OnKeyDown( self, event ):
+        if event.GetKeyCode() == wx.WXK_ESCAPE:
+            print ("it's working, YOU press Escape so it\
+            will close the frame Penjualan")
+            self.FPenjualanOnClose(self)
+        elif event.GetKeyCode()== wx.WXK_DELETE:
+            print ("it should make the text box clear")
+        else :
+            print ("youre not doing the right thing,it's not working")
+        event.Skip()
+        pass    
+   
+    def m_textCtrl13OnTextEnter( self, event ):
+        print ("this is work")
         pass
-    
-    def m_button17OnButtonClick( self, event ):
-        print ("This is working")
-        pass
-    
-    def m_button18OnButtonClick( self, event ):
-        print ("This is working")
-        pass
-    
-    def m_button19OnButtonClick( self, event ):
-        print ("This is working")
-        pass
-    
-    def m_button14OnButtonClick( self, event ):
-        print ("This is working")
-        pass
-    
-    def m_button15OnButtonClick( self, event ):
-        print ("This is working")
-        pass
-    
-    def m_button16OnButtonClick( self, event ):
-        print ("This is working")
-        pass
-    
+   
     def m_tool3OnToolClicked( self, event ):
         print ("This is working")
         pass
@@ -74,4 +57,5 @@ class FPenjualanEvent( mainframe.FPenjualan ):
     
     def m_tool6OnToolClicked( self, event ):
         pass
-    
+
+ 
