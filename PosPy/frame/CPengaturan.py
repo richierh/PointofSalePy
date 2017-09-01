@@ -11,8 +11,35 @@ class FPengaturanEvent( mainframe.FPengaturan ):
         mainframe.FPengaturan.__init__( self, parent )
         self.bukaform = frame.CForm.FFormEvent(self)
         self.dataimport =frame.cdataimport.FDataImportEvent(self)
-
+        self.custom_events()
+    
     # Handlers for FPengaturan events.
+
+    def custom_events(self):        
+        self.m_panel9.Bind( wx.EVT_CHAR_HOOK, self.m_panel9OnChar )
+
+
+    def FPengaturanOnClose(self,event):
+        # TODO: Implement FUtamaOnClose
+        try:
+            self.bukaform.Destroy()
+            self.dataimport.Destroy()
+            self.Destroy()
+        except:
+            self.Destroy()
+        pass              
+        pass
+    def m_panel9OnChar(self,event):
+        if event.GetKeyCode() == wx.WXK_ESCAPE:
+
+            print ("it's working, YOU press Escape so it\
+            will close the frame Penjualan")
+            self.FPengaturanOnClose(self)
+        else :
+            """Wrong button, or not exiting"""
+            print (FPengaturanEvent.FPengaturanOnKeyDown.__doc__)
+            print ("youre not doing the right thing,it's not working")
+        event.Skip()
     def m_button18OnButtonClick( self, event ):
         # TODO: Implement m_button18OnButtonClick
         try :
@@ -25,7 +52,9 @@ class FPengaturanEvent( mainframe.FPengaturan ):
     
     def m_button19OnButtonClick( self, event ):
         # TODO: Implement m_button19OnButtonClick
-        print ("hello")
+        """This is the m_button19OnButtonClick working\
+        test okay"""
+        print (FPengaturanEvent.m_button19OnButtonClick.__doc__)
         try:
             self.bukaform.Show()
         except:

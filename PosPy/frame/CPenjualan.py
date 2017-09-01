@@ -8,7 +8,10 @@ class FPenjualanEvent( mainframe.FPenjualan ):
     def __init__( self, parent ):
         mainframe.FPenjualan.__init__( self, parent )
         self.Maximize(True)
+<<<<<<< HEAD
         self.m_panel4.SetFocus()
+=======
+>>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
         self.mycolumns=["A","B","C","D","E"]
         self.mywidth=[50,250,300,200,200]
         self.heading = list(self.mycolumns)
@@ -20,14 +23,22 @@ class FPenjualanEvent( mainframe.FPenjualan ):
 
     # Handlers for FPenjualan events.
     def FPenjualanOnClose( self, event ):
+<<<<<<< HEAD
         # TODO: Implement FPenjualanOnClose
         self.Destroy()
         pass
          
+=======
+        #TODO: Implement FPenjualanOnClose
+        self.Destroy()
+        pass
+    
+>>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
     def m_textCtrl13OnText( self, event ):
         print (self.m_textCtrl13.GetValue())
         print ("This is working")
         pass
+<<<<<<< HEAD
         
     def m_textCtrl13OnKeyDown( self, event ):
         #import wx.KeyEvent()
@@ -47,6 +58,25 @@ class FPenjualanEvent( mainframe.FPenjualan ):
     def m_textCtrl13OnTextEnter( self, event ):
         event.Skip()
     
+=======
+
+    def m_textCtrl13OnKeyDown( self, event ):
+        if event.GetKeyCode() == wx.WXK_ESCAPE:
+            print ("it's working, YOU press Escape so it\
+            will close the frame Penjualan")
+            self.FPenjualanOnClose(self)
+        elif event.GetKeyCode()== wx.WXK_DELETE:
+            print ("it should make the text box clear")
+        else :
+            print ("youre not doing the right thing,it's not working")
+        event.Skip()
+        pass    
+   
+    def m_textCtrl13OnTextEnter( self, event ):
+        print ("this is work")
+        pass
+   
+>>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
     def m_tool3OnToolClicked( self, event ):
         event.Skip()
     
@@ -57,5 +87,11 @@ class FPenjualanEvent( mainframe.FPenjualan ):
         event.Skip()
     
     def m_tool6OnToolClicked( self, event ):
+<<<<<<< HEAD
         event.Skip()
     
+=======
+        pass
+
+ 
+>>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
