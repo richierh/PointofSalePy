@@ -37,6 +37,7 @@ class FUtamaEvent( mainframe.FUtama ):
     
     def m_button2OnButtonClick( self, event ):
         # TODO: Implement m_button2OnButtonClick
+
         try:
             self.framepeng.Show()
         except:
