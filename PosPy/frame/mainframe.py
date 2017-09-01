@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 ###########################################################################
-## Python code generated with wxFormBuilder (version Aug 31 2017)
+## Python code generated with wxFormBuilder (version Sep  1 2017)
 ## http://www.wxformbuilder.org/
 ##
 ## PLEASE DO "NOT" EDIT THIS FILE!
@@ -25,19 +25,19 @@ class FUtama ( wx.Frame ):
 		
 		bSizer1 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_panel1 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), wx.TAB_TRAVERSAL )
-		self.m_panel1.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.m_panel1.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		self.p_main = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), wx.TAB_TRAVERSAL )
+		self.p_main.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+		self.p_main.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
 		bSizer3 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_staticText3 = wx.StaticText( self.m_panel1, wx.ID_ANY, u"MODEL TAMPILAN APLIKASI", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText3.Wrap( -1 )
-		self.m_staticText3.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
-		self.m_staticText3.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.m_staticText3.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		self.statictext = wx.StaticText( self.p_main, wx.ID_ANY, u"MODEL TAMPILAN APLIKASI", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.statictext.Wrap( -1 )
+		self.statictext.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		self.statictext.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+		self.statictext.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
-		bSizer3.Add( self.m_staticText3, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		bSizer3.Add( self.statictext, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		bSizer28 = wx.BoxSizer( wx.HORIZONTAL )
 		
@@ -51,41 +51,41 @@ class FUtama ( wx.Frame ):
 		fgSizer2.SetFlexibleDirection( wx.BOTH )
 		fgSizer2.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_ALL )
 		
-		self.m_button1 = wx.Button( self.m_panel1, wx.ID_ANY, u"Penjualan", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_button1.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.m_button1.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		self.btnsale = wx.Button( self.p_main, wx.ID_ANY, u"Penjualan", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.btnsale.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+		self.btnsale.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
-		fgSizer2.Add( self.m_button1, 1, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL|wx.EXPAND, 5 )
+		fgSizer2.Add( self.btnsale, 1, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL|wx.EXPAND, 5 )
 		
-		self.m_button2 = wx.Button( self.m_panel1, wx.ID_ANY, u"Pengaturan", wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer2.Add( self.m_button2, 1, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		self.btnset = wx.Button( self.p_main, wx.ID_ANY, u"Pengaturan", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer2.Add( self.btnset, 1, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
-		self.m_button3 = wx.Button( self.m_panel1, wx.ID_ANY, u"Pembelian", wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer2.Add( self.m_button3, 1, wx.ALL|wx.EXPAND, 5 )
+		self.btnbuy = wx.Button( self.p_main, wx.ID_ANY, u"Pembelian", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer2.Add( self.btnbuy, 1, wx.ALL|wx.EXPAND, 5 )
 		
-		self.m_button4 = wx.Button( self.m_panel1, wx.ID_ANY, u"Laporan", wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer2.Add( self.m_button4, 1, wx.ALL|wx.EXPAND, 5 )
+		self.btnreport = wx.Button( self.p_main, wx.ID_ANY, u"Laporan", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer2.Add( self.btnreport, 1, wx.ALL|wx.EXPAND, 5 )
 		
-		self.m_button5 = wx.Button( self.m_panel1, wx.ID_ANY, u"Bantuan", wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer2.Add( self.m_button5, 1, wx.ALL|wx.EXPAND, 5 )
+		self.btnhelp = wx.Button( self.p_main, wx.ID_ANY, u"Bantuan", wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer2.Add( self.btnhelp, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		
 		bSizer28.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
-		self.m_bitmap2 = wx.StaticBitmap( self.m_panel1, wx.ID_ANY, wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_bitmap2.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
-		self.m_bitmap2.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.mainBitmap.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
+		self.mainBitmap.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
-		bSizer28.Add( self.m_bitmap2, 3, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.EXPAND, 5 )
+		bSizer28.Add( self.mainBitmap, 3, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.EXPAND, 5 )
 		
 		
 		bSizer3.Add( bSizer28, 1, wx.EXPAND, 5 )
 		
 		
-		self.m_panel1.SetSizer( bSizer3 )
-		self.m_panel1.Layout()
-		bSizer3.Fit( self.m_panel1 )
-		bSizer1.Add( self.m_panel1, 1, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		self.p_main.SetSizer( bSizer3 )
+		self.p_main.Layout()
+		bSizer3.Fit( self.p_main )
+		bSizer1.Add( self.p_main, 1, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		
 		self.SetSizer( bSizer1 )
@@ -95,16 +95,16 @@ class FUtama ( wx.Frame ):
 		self.m_menubar2.Append( self.m_menu2, u"Berkas" ) 
 		
 		self.m_menu5 = wx.Menu()
-		self.m_menuItem3 = wx.MenuItem( self.m_menu5, wx.ID_ANY, u"Penjualan", wx.EmptyString, wx.ITEM_NORMAL )
-		self.m_menu5.Append( self.m_menuItem3 )
+		self.menuitemsale = wx.MenuItem( self.m_menu5, wx.ID_ANY, u"Penjualan", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu5.Append( self.menuitemsale )
 		
-		self.m_menuItem4 = wx.MenuItem( self.m_menu5, wx.ID_ANY, u"Pembelian", wx.EmptyString, wx.ITEM_NORMAL )
-		self.m_menu5.Append( self.m_menuItem4 )
+		self.menuitembuy = wx.MenuItem( self.m_menu5, wx.ID_ANY, u"Pembelian", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu5.Append( self.menuitembuy )
 		
 		self.m_menu5.AppendSeparator()
 		
-		self.m_menuItem5 = wx.MenuItem( self.m_menu5, wx.ID_ANY, u"Laporan", wx.EmptyString, wx.ITEM_NORMAL )
-		self.m_menu5.Append( self.m_menuItem5 )
+		self.menuitemreport = wx.MenuItem( self.m_menu5, wx.ID_ANY, u"Laporan", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu5.Append( self.menuitemreport )
 		
 		self.m_menubar2.Append( self.m_menu5, u"Tampilan" ) 
 		
@@ -124,14 +124,14 @@ class FUtama ( wx.Frame ):
 		
 		# Connect Events
 		self.Bind( wx.EVT_CLOSE, self.FUtamaOnClose )
-		self.m_button1.Bind( wx.EVT_BUTTON, self.m_button1OnButtonClick )
-		self.m_button2.Bind( wx.EVT_BUTTON, self.m_button2OnButtonClick )
-		self.m_button3.Bind( wx.EVT_BUTTON, self.m_button3OnButtonClick )
-		self.m_button4.Bind( wx.EVT_BUTTON, self.m_button4OnButtonClick )
-		self.m_button5.Bind( wx.EVT_BUTTON, self.m_button5OnButtonClick )
-		self.Bind( wx.EVT_MENU, self.m_menuItem3OnMenuSelection, id = self.m_menuItem3.GetId() )
-		self.Bind( wx.EVT_MENU, self.m_menuItem4OnMenuSelection, id = self.m_menuItem4.GetId() )
-		self.Bind( wx.EVT_MENU, self.m_menuItem5OnMenuSelection, id = self.m_menuItem5.GetId() )
+		self.btnsale.Bind( wx.EVT_BUTTON, self.btnsaleOnButtonClick )
+		self.btnset.Bind( wx.EVT_BUTTON, self.btnsetOnButtonClick )
+		self.btnbuy.Bind( wx.EVT_BUTTON, self.btnbuyOnButtonClick )
+		self.btnreport.Bind( wx.EVT_BUTTON, self.btnreportOnButtonClick )
+		self.btnhelp.Bind( wx.EVT_BUTTON, self.btnhelpOnButtonClick )
+		self.Bind( wx.EVT_MENU, self.menuitemsaleOnMenuSelection, id = self.menuitemsale.GetId() )
+		self.Bind( wx.EVT_MENU, self.mitembuyOnMenuSelection, id = self.menuitembuy.GetId() )
+		self.Bind( wx.EVT_MENU, self.menuitemreportOnMenuSelection, id = self.menuitemreport.GetId() )
 		self.Bind( wx.EVT_MENU, self.m_menuItem2OnMenuSelection, id = self.m_menuItem2.GetId() )
 	
 	def __del__( self ):
@@ -142,28 +142,28 @@ class FUtama ( wx.Frame ):
 	def FUtamaOnClose( self, event ):
 		event.Skip()
 	
-	def m_button1OnButtonClick( self, event ):
+	def btnsaleOnButtonClick( self, event ):
 		event.Skip()
 	
-	def m_button2OnButtonClick( self, event ):
+	def btnsetOnButtonClick( self, event ):
 		event.Skip()
 	
-	def m_button3OnButtonClick( self, event ):
+	def btnbuyOnButtonClick( self, event ):
 		event.Skip()
 	
-	def m_button4OnButtonClick( self, event ):
+	def btnreportOnButtonClick( self, event ):
 		event.Skip()
 	
-	def m_button5OnButtonClick( self, event ):
+	def btnhelpOnButtonClick( self, event ):
 		event.Skip()
 	
-	def m_menuItem3OnMenuSelection( self, event ):
+	def menuitemsaleOnMenuSelection( self, event ):
 		event.Skip()
 	
-	def m_menuItem4OnMenuSelection( self, event ):
+	def mitembuyOnMenuSelection( self, event ):
 		event.Skip()
 	
-	def m_menuItem5OnMenuSelection( self, event ):
+	def menuitemreportOnMenuSelection( self, event ):
 		event.Skip()
 	
 	def m_menuItem2OnMenuSelection( self, event ):
@@ -183,9 +183,9 @@ class FForm ( wx.Frame ):
 		self.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
-		bSizer5 = wx.BoxSizer( wx.VERTICAL )
+		tn = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_panel2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL|wx.WANTS_CHARS )
 		self.m_panel2.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		self.m_panel2.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
@@ -254,10 +254,10 @@ class FForm ( wx.Frame ):
 		
 		bSizer7 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_button1 = wx.Button( self.m_panel2, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_button1 = wx.Button( self.m_panel2, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0|wx.TAB_TRAVERSAL )
 		bSizer7.Add( self.m_button1, 0, wx.ALL|wx.ALIGN_BOTTOM, 5 )
 		
-		self.m_button2 = wx.Button( self.m_panel2, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_button2 = wx.Button( self.m_panel2, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0|wx.TAB_TRAVERSAL )
 		bSizer7.Add( self.m_button2, 0, wx.ALL|wx.ALIGN_BOTTOM, 5 )
 		
 		
@@ -267,10 +267,10 @@ class FForm ( wx.Frame ):
 		self.m_panel2.SetSizer( bSizer6 )
 		self.m_panel2.Layout()
 		bSizer6.Fit( self.m_panel2 )
-		bSizer5.Add( self.m_panel2, 1, wx.EXPAND |wx.ALL, 5 )
+		tn.Add( self.m_panel2, 1, wx.EXPAND |wx.ALL, 5 )
 		
 		
-		self.SetSizer( bSizer5 )
+		self.SetSizer( tn )
 		self.Layout()
 		
 		self.Centre( wx.BOTH )
@@ -330,7 +330,7 @@ class FPenjualan ( wx.Frame ):
 		
 		bSizer10 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_panel4 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_panel4 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_panel4.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		self.m_panel4.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
@@ -354,13 +354,13 @@ class FPenjualan ( wx.Frame ):
 		
 		fgSizer4.Add( self.m_staticText16, 1, wx.ALL|wx.ALIGN_BOTTOM|wx.EXPAND, 5 )
 		
-		self.m_staticText17 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"Nama Barang", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText17 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"A", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText17.Wrap( -1 )
 		self.m_staticText17.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		
 		fgSizer4.Add( self.m_staticText17, 0, wx.ALL|wx.ALIGN_BOTTOM, 5 )
 		
-		self.m_staticText18 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"Kuantiti", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText18 = wx.StaticText( self.m_panel4, wx.ID_ANY, u"B", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText18.Wrap( -1 )
 		self.m_staticText18.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		
@@ -437,19 +437,10 @@ class FPenjualan ( wx.Frame ):
 		bSizer27.Add( bSizer26, 5, wx.EXPAND, 5 )
 		
 		
-<<<<<<< HEAD
-		bSizer11.Add( bSizer27, 1, wx.EXPAND, 5 )
-		
-		bSizer29 = wx.BoxSizer( wx.VERTICAL )
-		
-		
-		bSizer11.Add( bSizer29, 1, wx.EXPAND, 5 )
-=======
 		bSizer11.Add( bSizer27, 4, wx.EXPAND, 5 )
 		
 		
 		bSizer11.Add( ( 300, 0), 1, wx.EXPAND, 5 )
->>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
 		
 		
 		self.m_panel4.SetSizer( bSizer11 )
@@ -460,39 +451,12 @@ class FPenjualan ( wx.Frame ):
 		
 		self.SetSizer( bSizer10 )
 		self.Layout()
-<<<<<<< HEAD
-		self.MenuPenjualan = wx.MenuBar( 0 )
-		self.m_menu2 = wx.Menu()
-		self.MenuPenjualan.Append( self.m_menu2, u"Berkas" ) 
-		
-		self.SetMenuBar( self.MenuPenjualan )
-		
-		self.m_toolBar4 = self.CreateToolBar( wx.TB_HORIZONTAL, wx.ID_ANY ) 
-		self.m_tool3 = self.m_toolBar4.AddLabelTool( wx.ID_ANY, u"tool", wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/toolbars/software.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-		
-		self.m_tool4 = self.m_toolBar4.AddLabelTool( wx.ID_ANY, u"tool", wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/toolbars/software.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-		
-		self.m_tool5 = self.m_toolBar4.AddLabelTool( wx.ID_ANY, u"tool", wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/toolbars/software.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-		
-		self.m_tool6 = self.m_toolBar4.AddLabelTool( wx.ID_ANY, u"tool", wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/toolbars/software.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None ) 
-		
-		self.m_toolBar4.Realize() 
-		
-=======
->>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
 		
 		# Connect Events
 		self.Bind( wx.EVT_CLOSE, self.FPenjualanOnClose )
 		self.m_textCtrl13.Bind( wx.EVT_KEY_DOWN, self.m_textCtrl13OnKeyDown )
 		self.m_textCtrl13.Bind( wx.EVT_TEXT, self.m_textCtrl13OnText )
 		self.m_textCtrl13.Bind( wx.EVT_TEXT_ENTER, self.m_textCtrl13OnTextEnter )
-<<<<<<< HEAD
-		self.Bind( wx.EVT_TOOL, self.m_tool3OnToolClicked, id = self.m_tool3.GetId() )
-		self.Bind( wx.EVT_TOOL, self.m_tool4OnToolClicked, id = self.m_tool4.GetId() )
-		self.Bind( wx.EVT_TOOL, self.m_tool5OnToolClicked, id = self.m_tool5.GetId() )
-		self.Bind( wx.EVT_TOOL, self.m_tool6OnToolClicked, id = self.m_tool6.GetId() )
-=======
->>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
 	
 	def __del__( self ):
 		pass
@@ -509,21 +473,6 @@ class FPenjualan ( wx.Frame ):
 		event.Skip()
 	
 	def m_textCtrl13OnTextEnter( self, event ):
-<<<<<<< HEAD
-		event.Skip()
-	
-	def m_tool3OnToolClicked( self, event ):
-		event.Skip()
-	
-	def m_tool4OnToolClicked( self, event ):
-		event.Skip()
-	
-	def m_tool5OnToolClicked( self, event ):
-		event.Skip()
-	
-	def m_tool6OnToolClicked( self, event ):
-=======
->>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
 		event.Skip()
 	
 
@@ -625,6 +574,7 @@ class FPengaturan ( wx.Frame ):
 		
 		# Connect Events
 		self.Bind( wx.EVT_CLOSE, self.FPengaturanOnClose )
+		self.m_panel9.Bind( wx.EVT_CHAR, self.m_panel9OnChar )
 		self.m_button18.Bind( wx.EVT_BUTTON, self.m_button18OnButtonClick )
 		self.m_button19.Bind( wx.EVT_BUTTON, self.m_button19OnButtonClick )
 		self.m_button20.Bind( wx.EVT_BUTTON, self.m_button20OnButtonClick )
@@ -638,6 +588,9 @@ class FPengaturan ( wx.Frame ):
 	
 	# Virtual event handlers, overide them in your derived class
 	def FPengaturanOnClose( self, event ):
+		event.Skip()
+	
+	def m_panel9OnChar( self, event ):
 		event.Skip()
 	
 	def m_button18OnButtonClick( self, event ):
@@ -745,7 +698,7 @@ class Panel2 ( wx.Panel ):
 class FDataImport ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Import", pos = wx.DefaultPosition, size = wx.Size( 200,200 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Import", pos = wx.DefaultPosition, size = wx.Size( 200,200 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.TAB_TRAVERSAL|wx.WANTS_CHARS )
 		
 		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 		self.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
@@ -813,9 +766,6 @@ class FLaporan ( wx.Frame ):
 		
 		self.m_panel19 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer36 = wx.BoxSizer( wx.VERTICAL )
-		
-		
-		bSizer36.Add( self.m_customControl3, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		
 		self.m_panel19.SetSizer( bSizer36 )

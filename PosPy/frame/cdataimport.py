@@ -7,8 +7,21 @@ import frame.mainframe as mainframe
 class FDataImportEvent( mainframe.FDataImport ):
 	def __init__( self, parent ):
 		mainframe.FDataImport.__init__( self, parent )
+		self.custom_event(self)
 
+	def custom_event(self,event):
+		self.m_button25.Bind(wx.EVT_BUTTON,self.batal)
+		self.m_panel11.Bind(wx.EVT_CHAR_HOOK,self.mpanel11closeonHook)
+
+	def mpanel11closeonHook(self,event):
+		if event.GetKeyCode()==wx.WXK_ESCAPE:
+			self.Destroy()
+		
+		event.Skip()
 	# Handlers for DataImport events.
+	def batal(self,event):
+		self.Destroy()
+		event.Skip()
 	def m_filePicker1OnFileChanged( self, event ):
 			
 		# TODO: Implement m_filePicker1OnFileChanged

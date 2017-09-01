@@ -1,7 +1,0 @@
---2017-08-24 09:16:29--  http://drive.noobslab.com/data/apps/AdobeAir/adobeair_2.6.0.2_i386.deb/home/richie/.virtualenvs/ormpony/bin/python
-Resolving drive.noobslab.com (drive.noobslab.com)... 108.167.143.64
-Connecting to drive.noobslab.com (drive.noobslab.com)|108.167.143.64|:80... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2017-08-24 09:16:35 ERROR 404: Not Found.
-
-/home/richie/mygit/PointofSalePy/PosPy/App.py: Scheme missing.

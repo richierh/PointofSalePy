@@ -13,10 +13,17 @@ class FPengaturanEvent( mainframe.FPengaturan ):
         self.dataimport =frame.cdataimport.FDataImportEvent(self)
         self.custom_events()
     
-    # Handlers for FPengaturan events.
+    # Handlers for events.
 
     def custom_events(self):        
         self.m_panel9.Bind( wx.EVT_CHAR_HOOK, self.m_panel9OnChar )
+        self.Bind( wx.EVT_CLOSE, self.FPengaturanOnClose )
+        self.m_button18.Bind( wx.EVT_BUTTON, self.tombol1 )
+        self.m_button19.Bind( wx.EVT_BUTTON, self.tombol2 )
+        self.m_button20.Bind( wx.EVT_BUTTON, self.tombol3 )
+        self.m_button21.Bind( wx.EVT_BUTTON, self.tombol4 )
+        self.m_button22.Bind( wx.EVT_BUTTON, self.tombol5)
+        self.m_button23.Bind( wx.EVT_BUTTON, self.tombol6 )
 
 
     def FPengaturanOnClose(self,event):
@@ -28,7 +35,7 @@ class FPengaturanEvent( mainframe.FPengaturan ):
         except:
             self.Destroy()
         pass              
-        pass
+        
     def m_panel9OnChar(self,event):
         if event.GetKeyCode() == wx.WXK_ESCAPE:
 
@@ -40,8 +47,8 @@ class FPengaturanEvent( mainframe.FPengaturan ):
             print (FPengaturanEvent.FPengaturanOnKeyDown.__doc__)
             print ("youre not doing the right thing,it's not working")
         event.Skip()
-    def m_button18OnButtonClick( self, event ):
-        # TODO: Implement m_button18OnButtonClick
+    def tombol1( self, event ):
+        # TODO: Implement tombol1
         try :
             self.dataimport.Show()
         except :
@@ -50,11 +57,11 @@ class FPengaturanEvent( mainframe.FPengaturan ):
         
         pass
     
-    def m_button19OnButtonClick( self, event ):
-        # TODO: Implement m_button19OnButtonClick
-        """This is the m_button19OnButtonClick working\
+    def tombol2( self, event ):
+        # TODO: Implement tombol2
+        """This is the tombol2 working\
         test okay"""
-        print (FPengaturanEvent.m_button19OnButtonClick.__doc__)
+        print (FPengaturanEvent.tombol2.__doc__)
         try:
             self.bukaform.Show()
         except:
@@ -62,20 +69,19 @@ class FPengaturanEvent( mainframe.FPengaturan ):
             self.bukaform.Show()
         pass
     
-    def m_button20OnButtonClick( self, event ):
-        # TODO: Implement m_button20OnButtonClick
+    def tombol3( self, event ):
+        # TODO: Implement tombol3
         pass
     
-    def m_button21OnButtonClick( self, event ):
-        # TODO: Implement m_button21OnButtonClick
+    def tombol4( self, event ):
+        # TODO: Implement tombol4
         pass
     
-    def m_button22OnButtonClick( self, event ):
-        # TODO: Implement m_button22OnButtonClick
+    def tombol5( self, event ):
+        # TODO: Implement tombol5        pass
         pass
-    
-    def m_button23OnButtonClick( self, event ):
-        # TODO: Implement m_button23OnButtonClick
+    def tombol6( self, event ):
+        # TODO: Implement tombol5
         pass
     
     

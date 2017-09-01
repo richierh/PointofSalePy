@@ -1,21 +1,10 @@
 {
-<<<<<<< HEAD
     "python.pythonPath": "/home/richie/.virtualenvs/ormpony/bin/python",
     "python.autoComplete.extraPaths": [
         "/home/richie/mygit/PointofSalePy/PosPy/mainframe",
         "/home/richie/mygit/PointofSalePy/PosPy",
         "/home/richie/mygit/PointofSalePy/PosPy/custom/",
         "/home/richie/mygit/PointofSalePy/PosPy/event"
-    ]
-
-=======
-    "python.pythonPath": "/usr/bin/python",
-    "python.autoComplete.extraPaths": [
-        "/home/pmc/mygit/PointofSalePy/PosPy/mainframe",
-        "/home/pmc/mygit/PointofSalePy/PosPy",
-        "/home/pmc/mygit/PointofSalePy/PosPy/custom/",
-        "/home/pmc/mygit/PointofSalePy/PosPy/event"
     ],
     "python.linting.pylintEnabled": false
->>>>>>> aff981f1f57ef19bc41f34ee0e53dddf0a89eb6d
 }
