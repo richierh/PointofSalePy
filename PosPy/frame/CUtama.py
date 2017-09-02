@@ -20,8 +20,10 @@ class FUtamaEvent( mainframe.FUtama ):
     
     def custom_event(self):
         # Connect Events
-        self.Bind(wx.EVT_CHAR_HOOK,self.futamaoncloseescape)
-        self.Bind( wx.EVT_CLOSE, self.FUtamaOnClose )
+        self.Bind(wx.EVT_CHAR_HOOK,self.futamaoncloseescape )
+        self.Bind( wx.EVT_CLOSE, self.FUtamaOnClose)
+        #self.accel = wx.AcceleratorTable([(wx.ACCEL_ALT,ord("B"),id=30)])
+        #self.SetAcceleratorTable(self.accel)
         self.btnsale.Bind( wx.EVT_BUTTON, self.btnsaleOnButtonClick )
         self.btnset.Bind( wx.EVT_BUTTON, self.btnsetOnButtonClick )
         self.btnbuy.Bind( wx.EVT_BUTTON, self.tombolpembelian )
@@ -35,10 +37,13 @@ class FUtamaEvent( mainframe.FUtama ):
         # Virtual event handlers, overide them in your derived class
  
     def futamaoncloseescape(self,event):
+        print ("you press ctrl+ B")
+        print (event.GetKeyCode())
         if event.GetKeyCode()==wx.WXK_ESCAPE:
-            self.Destroy()
+            print ("true")
+            self.m_menubar2.SetFocus()
         event.Skip()
-
+        pass
     def tombolpembelian( self, event ):
         event.Skip()
         

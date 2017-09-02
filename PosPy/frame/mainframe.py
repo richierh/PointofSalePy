@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 ###########################################################################
-## Python code generated with wxFormBuilder (version Sep  1 2017)
+## Python code generated with wxFormBuilder (version Aug 31 2017)
 ## http://www.wxformbuilder.org/
 ##
 ## PLEASE DO "NOT" EDIT THIS FILE!
@@ -72,7 +72,7 @@ class FUtama ( wx.Frame ):
 		
 		bSizer28.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
-		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/pmc/mygit/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.mainBitmap.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
 		self.mainBitmap.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
@@ -90,7 +90,7 @@ class FUtama ( wx.Frame ):
 		
 		self.SetSizer( bSizer1 )
 		self.Layout()
-		self.m_menubar2 = wx.MenuBar( 0 )
+		self.m_menubar2 = wx.MenuBar( 0|wx.TAB_TRAVERSAL|wx.WANTS_CHARS )
 		self.m_menu2 = wx.Menu()
 		self.m_menubar2.Append( self.m_menu2, u"Berkas" ) 
 		
@@ -119,6 +119,7 @@ class FUtama ( wx.Frame ):
 		
 		self.SetMenuBar( self.m_menubar2 )
 		
+		self.m_statusBar1 = self.CreateStatusBar( 1, 0, wx.ID_ANY )
 		
 		self.Centre( wx.BOTH )
 		
@@ -129,6 +130,7 @@ class FUtama ( wx.Frame ):
 		self.btnbuy.Bind( wx.EVT_BUTTON, self.btnbuyOnButtonClick )
 		self.btnreport.Bind( wx.EVT_BUTTON, self.btnreportOnButtonClick )
 		self.btnhelp.Bind( wx.EVT_BUTTON, self.btnhelpOnButtonClick )
+		self.m_menubar2.Bind( wx.EVT_CHAR, self.m_menubar2OnChar )
 		self.Bind( wx.EVT_MENU, self.menuitemsaleOnMenuSelection, id = self.menuitemsale.GetId() )
 		self.Bind( wx.EVT_MENU, self.mitembuyOnMenuSelection, id = self.menuitembuy.GetId() )
 		self.Bind( wx.EVT_MENU, self.menuitemreportOnMenuSelection, id = self.menuitemreport.GetId() )
@@ -157,6 +159,9 @@ class FUtama ( wx.Frame ):
 	def btnhelpOnButtonClick( self, event ):
 		event.Skip()
 	
+	def m_menubar2OnChar( self, event ):
+		event.Skip()
+	
 	def menuitemsaleOnMenuSelection( self, event ):
 		event.Skip()
 	
@@ -175,6 +180,151 @@ class FUtama ( wx.Frame ):
 ###########################################################################
 
 class FForm ( wx.Frame ):
+	
+	def __init__( self, parent ):
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Formulir Isian", pos = wx.DefaultPosition, size = wx.Size( 700,500 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		
+		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+		self.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+		self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		
+		tn = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_panel2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL|wx.WANTS_CHARS )
+		self.m_panel2.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+		self.m_panel2.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		
+		bSizer6 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_staticText7 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"FORMULIR", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText7.Wrap( -1 )
+		self.m_staticText7.SetFont( wx.Font( 20, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		
+		bSizer6.Add( self.m_staticText7, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		
+		fgSizer2 = wx.FlexGridSizer( 6, 2, 0, 0 )
+		fgSizer2.SetFlexibleDirection( wx.BOTH )
+		fgSizer2.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+		
+		self.m_staticText1 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label A", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText1.Wrap( -1 )
+		fgSizer2.Add( self.m_staticText1, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_textCtrl1 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
+		self.m_textCtrl1.SetMaxLength( 0 ) 
+		fgSizer2.Add( self.m_textCtrl1, 0, wx.ALL, 5 )
+		
+		self.m_staticText2 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label B", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText2.Wrap( -1 )
+		fgSizer2.Add( self.m_staticText2, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_textCtrl2 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
+		self.m_textCtrl2.SetMaxLength( 0 ) 
+		fgSizer2.Add( self.m_textCtrl2, 0, wx.ALL, 5 )
+		
+		self.m_staticText3 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label 3", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText3.Wrap( -1 )
+		fgSizer2.Add( self.m_staticText3, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_textCtrl3 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
+		self.m_textCtrl3.SetMaxLength( 0 ) 
+		fgSizer2.Add( self.m_textCtrl3, 0, wx.ALL, 5 )
+		
+		self.m_staticText4 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label 4", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText4.Wrap( -1 )
+		fgSizer2.Add( self.m_staticText4, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_textCtrl4 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
+		self.m_textCtrl4.SetMaxLength( 0 ) 
+		fgSizer2.Add( self.m_textCtrl4, 0, wx.ALL, 5 )
+		
+		self.m_staticText5 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label 6", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText5.Wrap( -1 )
+		fgSizer2.Add( self.m_staticText5, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_textCtrl5 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
+		self.m_textCtrl5.SetMaxLength( 0 ) 
+		fgSizer2.Add( self.m_textCtrl5, 0, wx.ALL, 5 )
+		
+		self.m_staticText6 = wx.StaticText( self.m_panel2, wx.ID_ANY, u"Label 7", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText6.Wrap( -1 )
+		fgSizer2.Add( self.m_staticText6, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
+		
+		self.m_textCtrl6 = wx.TextCtrl( self.m_panel2, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 600,-1 ), 0 )
+		self.m_textCtrl6.SetMaxLength( 0 ) 
+		fgSizer2.Add( self.m_textCtrl6, 0, wx.ALL, 5 )
+		
+		
+		bSizer6.Add( fgSizer2, 4, wx.EXPAND, 5 )
+		
+		bSizer7 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_button1 = wx.Button( self.m_panel2, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0|wx.TAB_TRAVERSAL )
+		bSizer7.Add( self.m_button1, 0, wx.ALL|wx.ALIGN_BOTTOM, 5 )
+		
+		self.m_button2 = wx.Button( self.m_panel2, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0|wx.TAB_TRAVERSAL )
+		bSizer7.Add( self.m_button2, 0, wx.ALL|wx.ALIGN_BOTTOM, 5 )
+		
+		
+		bSizer6.Add( bSizer7, 2, wx.ALIGN_RIGHT, 5 )
+		
+		
+		self.m_panel2.SetSizer( bSizer6 )
+		self.m_panel2.Layout()
+		bSizer6.Fit( self.m_panel2 )
+		tn.Add( self.m_panel2, 1, wx.EXPAND |wx.ALL, 5 )
+		
+		
+		self.SetSizer( tn )
+		self.Layout()
+		
+		self.Centre( wx.BOTH )
+		
+		# Connect Events
+		self.m_textCtrl1.Bind( wx.EVT_TEXT, self.m_textCtrl1OnText )
+		self.m_textCtrl2.Bind( wx.EVT_TEXT, self.m_textCtrl2OnText )
+		self.m_textCtrl3.Bind( wx.EVT_TEXT, self.m_textCtrl3OnText )
+		self.m_textCtrl4.Bind( wx.EVT_TEXT, self.m_textCtrl4OnText )
+		self.m_textCtrl5.Bind( wx.EVT_TEXT, self.m_textCtrl5OnText )
+		self.m_textCtrl6.Bind( wx.EVT_TEXT, self.m_textCtrl6OnText )
+		self.m_button1.Bind( wx.EVT_BUTTON, self.m_button1OnButtonClick )
+		self.m_button2.Bind( wx.EVT_BUTTON, self.m_button2OnButtonClick )
+	
+	def __del__( self ):
+		pass
+	
+	
+	# Virtual event handlers, overide them in your derived class
+	def m_textCtrl1OnText( self, event ):
+		event.Skip()
+	
+	def m_textCtrl2OnText( self, event ):
+		event.Skip()
+	
+	def m_textCtrl3OnText( self, event ):
+		event.Skip()
+	
+	def m_textCtrl4OnText( self, event ):
+		event.Skip()
+	
+	def m_textCtrl5OnText( self, event ):
+		event.Skip()
+	
+	def m_textCtrl6OnText( self, event ):
+		event.Skip()
+	
+	def m_button1OnButtonClick( self, event ):
+		event.Skip()
+	
+	def m_button2OnButtonClick( self, event ):
+		event.Skip()
+	
+
+###########################################################################
+## Class FForm2
+###########################################################################
+
+class FForm2 ( wx.Frame ):
 	
 	def __init__( self, parent ):
 		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Formulir Isian", pos = wx.DefaultPosition, size = wx.Size( 700,500 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
