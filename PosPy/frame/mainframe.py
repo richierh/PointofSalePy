@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 ###########################################################################
-## Python code generated with wxFormBuilder (version Aug 31 2017)
+## Python code generated with wxFormBuilder (version Sep  1 2017)
 ## http://www.wxformbuilder.org/
 ##
 ## PLEASE DO "NOT" EDIT THIS FILE!
@@ -72,7 +72,7 @@ class FUtama ( wx.Frame ):
 		
 		bSizer28.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
-		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/pmc/mygit/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.mainBitmap.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
 		self.mainBitmap.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
