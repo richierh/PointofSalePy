@@ -5,6 +5,5 @@
         "/home/richie/mygit/PointofSalePy/PosPy",
         "/home/richie/mygit/PointofSalePy/PosPy/custom/",
         "/home/richie/mygit/PointofSalePy/PosPy/event"
-    ],
-    "python.linting.pylintEnabled": false
+    ]
 }
