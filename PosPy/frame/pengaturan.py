@@ -2,14 +2,14 @@
 
 import wx
 import frame.mainframe as mainframe
-import frame.CForm
+import frame.form
 import frame.cdataimport
 
 # Implementing FPengaturan
 class FPengaturanEvent( mainframe.FPengaturan ):
     def __init__( self, parent ):
         mainframe.FPengaturan.__init__( self, parent )
-        self.bukaform = frame.CForm.FFormEvent(self)
+        self.bukaform = frame.form.FFormEvent(self)
         self.dataimport =frame.cdataimport.FDataImportEvent(self)
         self.custom_events()
     
@@ -65,7 +65,7 @@ class FPengaturanEvent( mainframe.FPengaturan ):
         try:
             self.bukaform.Show()
         except:
-            self.bukaform = frame.CForm.FFormEvent(self)
+            self.bukaform = frame.form.FFormEvent(self)
             self.bukaform.Show()
         pass
     

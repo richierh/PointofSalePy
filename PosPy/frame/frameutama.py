@@ -32,12 +32,12 @@ class FUtama ( wx.Frame ):
 		bSizer3 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.statictext = wx.StaticText( self.p_main, wx.ID_ANY, u"MODEL TAMPILAN APLIKASI", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.statictext.Wrap( True )
-		self.statictext.SetFont( wx.Font( 15, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+		self.statictext.Wrap( -1 )
+		self.statictext.SetFont( wx.Font(24 , wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 		self.statictext.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		self.statictext.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
-		bSizer3.Add( self.statictext, 0, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		bSizer3.Add( self.statictext, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		bSizer28 = wx.BoxSizer( wx.HORIZONTAL )
 		
@@ -72,7 +72,7 @@ class FUtama ( wx.Frame ):
 		
 		bSizer28.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
-		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/richie/mygit/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/richie/Projects/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.mainBitmap.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
 		self.mainBitmap.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
@@ -92,7 +92,21 @@ class FUtama ( wx.Frame ):
 		self.Layout()
 		self.m_menubar2 = wx.MenuBar( 0|wx.TAB_TRAVERSAL|wx.WANTS_CHARS )
 		self.m_menu2 = wx.Menu()
-		self.m_menubar2.Append( self.m_menu2, u"Berkas" ) 
+		self.m_submenu = wx.Menu()
+
+		self.menuitemsave=wx.MenuItem(self.m_menu2,wx.ID_ANY,u"Save",wx.EmptyString,wx.ITEM_NORMAL)
+		self.menuitemexit=wx.MenuItem(self.m_menu2,wx.ID_ANY,u"Exit",wx.EmptyString,wx.ITEM_NORMAL)
+	
+		self.menuitemsavepdf = wx.MenuItem(self.m_menu2,wx.ID_ANY,u"Pdf",wx.EmptyString,wx.ITEM_NORMAL)
+		self.m_submenu.Append(self.menuitemsavepdf)
+
+		self.m_menu2.Append(self.menuitemsave)
+
+		self.m_menu2.AppendSubMenu(self.m_submenu,"Save As ..")
+		self.m_menu2.Bind(wx.EVT_MENU,self.Onclickexit,self.menuitemexit)
+		self.m_menu2.AppendSeparator()
+		self.m_menu2.Append(self.menuitemexit)
+		self.m_menubar2.Append( self.m_menu2, u"&Berkas" ) 
 		
 		self.m_menu5 = wx.Menu()
 		self.menuitemsale = wx.MenuItem( self.m_menu5, wx.ID_ANY, u"Penjualan", wx.EmptyString, wx.ITEM_NORMAL )
@@ -106,16 +120,16 @@ class FUtama ( wx.Frame ):
 		self.menuitemreport = wx.MenuItem( self.m_menu5, wx.ID_ANY, u"Laporan", wx.EmptyString, wx.ITEM_NORMAL )
 		self.m_menu5.Append( self.menuitemreport )
 		
-		self.m_menubar2.Append( self.m_menu5, u"Tampilan" ) 
+		self.m_menubar2.Append( self.m_menu5, u"&Tampilan" ) 
 		
 		self.m_menu3 = wx.Menu()
 		self.m_menuItem2 = wx.MenuItem( self.m_menu3, wx.ID_ANY, u"Data", wx.EmptyString, wx.ITEM_NORMAL )
 		self.m_menu3.Append( self.m_menuItem2 )
 		
-		self.m_menubar2.Append( self.m_menu3, u"Pengaturan" ) 
+		self.m_menubar2.Append( self.m_menu3, u"&Pengaturan" ) 
 		
 		self.m_menu4 = wx.Menu()
-		self.m_menubar2.Append( self.m_menu4, u"Bantuan" ) 
+		self.m_menubar2.Append( self.m_menu4, u"&Bantuan" ) 
 		
 		self.SetMenuBar( self.m_menubar2 )
 		
@@ -174,4 +188,7 @@ class FUtama ( wx.Frame ):
 	def m_menuItem2OnMenuSelection( self, event ):
 		event.Skip()
 	
-
+	def Onclickexit(self,event):
+		print ("hello")
+		self.Close()
+		event.Skip()
