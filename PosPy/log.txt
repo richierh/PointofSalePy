@@ -1,0 +1,2 @@
+19:57:15: can't open file '../frame/icons/store.png' (error 2: No such file or directory)
+19:57:15: Failed to load image from file "../frame/icons/store.png".

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="FUtama">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>500,400</size>
+		<bg>#f0f0f0</bg>
+		<fg>#4a4a4a</fg>
+		<title>SOFTWARE</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxPanel" name="p_main">
+			<style>wxTAB_TRAVERSAL</style>
+			<bg>#f0f0f0</bg>
+			<fg>#4a4a4a</fg>
+			<object class="wxBoxSizer">
+				<orient>wxVERTICAL</orient>
+				<object class="sizeritem">
+					<option>0</option>
+					<flag>wxALL|wxALIGN_CENTER_HORIZONTAL</flag>
+					<border>5</border>
+					<object class="wxStaticText" name="statictext">
+						<bg>#f0f0f0</bg>
+						<fg>#4a4a4a</fg>
+						<font>
+							<size>24</size>
+							<family>swiss</family>
+							<style>normal</style>
+							<weight>normal</weight>
+							<underlined>0</underlined>
+							<face>Sans</face>
+						</font>
+						<label>MODEL TAMPILAN APLIKASI</label>
+						<wrap>-1</wrap>
+					</object>
+				</object>
+				<object class="sizeritem">
+					<option>1</option>
+					<flag>wxEXPAND</flag>
+					<border>5</border>
+					<object class="wxBoxSizer">
+						<orient>wxHORIZONTAL</orient>
+						<object class="sizeritem">
+							<option>1</option>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxFlexGridSizer">
+								<rows>5</rows>
+								<cols>0</cols>
+								<vgap>0</vgap>
+								<hgap>0</hgap>
+								<growablecols>0</growablecols>
+								<growablerows>0,1,2,3,4</growablerows>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxButton" name="btnsale">
+										<bg>#f0f0f0</bg>
+										<fg>#4a4a4a</fg>
+										<label>Penjualan</label>
+										<default>0</default>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL</flag>
+									<border>5</border>
+									<object class="wxButton" name="btnset">
+										<label>Pengaturan</label>
+										<default>0</default>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxButton" name="btnbuy">
+										<label>Pembelian</label>
+										<default>0</default>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxButton" name="btnreport">
+										<label>Laporan</label>
+										<default>0</default>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxButton" name="btnhelp">
+										<label>Bantuan</label>
+										<default>0</default>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="sizeritem">
+							<option>3</option>
+							<flag>wxALL|wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+							<border>5</border>
+							<object class="wxStaticBitmap" name="mainBitmap">
+								<bg>#f0f0f0</bg>
+								<fg>#f0f0f0</fg>
+								<bitmap>../frame/icons/store.png</bitmap>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxMenuBar" name="m_menubar2">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="m_menu2">
+				<label>Berkas</label>
+			</object>
+			<object class="wxMenu" name="m_menu5">
+				<label>Tampilan</label>
+				<object class="wxMenuItem" name="menuitemsale">
+					<label>Penjualan</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="menuitembuy">
+					<label>Pembelian</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="menuitemreport">
+					<label>Laporan</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu3">
+				<label>Pengaturan</label>
+				<object class="wxMenuItem" name="m_menuItem2">
+					<label>Data</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu4">
+				<label>Bantuan</label>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="m_statusBar1">
+			<fields>1</fields>
+		</object>
+	</object>
+</resource>
+
