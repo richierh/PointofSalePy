@@ -1,7 +1,6 @@
 import os,sys
-dn = os.path.dirname(os.path.realpath(__file__))
-fn = os.path.join(dn,"PosPy")
+dn = os.chdir(os.path.dirname(sys.argv[0]))
 print (dn)
-import App
+import app
 
 ### Tidak berisi kode apapun kecuali untuk import dari file App.py saja

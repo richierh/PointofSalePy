@@ -34,8 +34,7 @@ class FUtama ( wx.Frame ):
 		self.statictext = wx.StaticText( self.p_main, wx.ID_ANY, u"MODEL TAMPILAN APLIKASI", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.statictext.Wrap( -1 )
 		self.statictext.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
-		self.statictext.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.statictext.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+	
 		
 		bSizer3.Add( self.statictext, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
@@ -52,8 +51,7 @@ class FUtama ( wx.Frame ):
 		fgSizer2.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_ALL )
 		
 		self.btnsale = wx.Button( self.p_main, wx.ID_ANY, u"Penjualan", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.btnsale.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.btnsale.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+
 		
 		fgSizer2.Add( self.btnsale, 1, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL|wx.EXPAND, 5 )
 		

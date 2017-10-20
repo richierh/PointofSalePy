@@ -20,22 +20,22 @@ class FUtama ( wx.Frame ):
 		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"SOFTWARE", pos = wx.DefaultPosition, size = wx.Size( 500,400 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHints( wx.Size( 500,400 ) )
-		self.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+	#	self.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+	#	self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
 		bSizer1 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.p_main = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), wx.TAB_TRAVERSAL )
-		self.p_main.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.p_main.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+	#	self.p_main.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+	#	self.p_main.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
 		bSizer3 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.statictext = wx.StaticText( self.p_main, wx.ID_ANY, u"MODEL TAMPILAN APLIKASI", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.statictext.Wrap( -1 )
 		self.statictext.SetFont( wx.Font(24 , wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
-		self.statictext.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.statictext.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+	#	self.statictext.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+	#	self.statictext.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
 		bSizer3.Add( self.statictext, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
@@ -52,8 +52,8 @@ class FUtama ( wx.Frame ):
 		fgSizer2.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_ALL )
 		
 		self.btnsale = wx.Button( self.p_main, wx.ID_ANY, u"Penjualan", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.btnsale.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
-		self.btnsale.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+	#	self.btnsale.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+	#	self.btnsale.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
 		fgSizer2.Add( self.btnsale, 1, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL|wx.EXPAND, 5 )
 		
@@ -72,9 +72,9 @@ class FUtama ( wx.Frame ):
 		
 		bSizer28.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
-		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/richie/Projects/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.mainBitmap.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
-		self.mainBitmap.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
+		self.mainBitmap = wx.StaticBitmap( self.p_main, wx.ID_ANY, wx.Bitmap( u"/home/pmc/Projects/PointofSalePy/PosPy/frame/icons/store.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+	#	self.mainBitmap.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_MENU ) )
+	#	self.mainBitmap.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWFRAME ) )
 		
 		bSizer28.Add( self.mainBitmap, 3, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.EXPAND, 5 )
 		
